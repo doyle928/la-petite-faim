@@ -43,6 +43,9 @@ const Header = () => {
   let header_class = scroll ? "scrolled-menu" : "";
   const scroll_logoSmall = useScrollHandler(215);
   let logoSmall_class = scroll_logoSmall ? "show-logo" : "";
+  let menuBackground_class = menu
+    ? "menu-show-black-true"
+    : "menu-show-black-false";
 
   return (
     <div className="header">
@@ -58,6 +61,7 @@ const Header = () => {
           <MenuRounded style={styles.mobileHamburger} />
         </span>
       </div>
+      <div className={menuBackground_class}></div>
       <div className={`menu-mobile ${menu_class}`}>
         <ul>
           <li className="menu-close">

@@ -20,7 +20,8 @@ function History() {
         </p>
         <p>
           Elle a obtenu un DUT Techniques de commercialisation, et lui un CAP
-          pâtisserie.<br/>
+          pâtisserie.
+          <br />
           Ils se sont rencontrés en 2016, à Rouen, à l’INBP (Institut national
           de Boulangerie-Pâtisserie).
         </p>

@@ -21,13 +21,16 @@ const SlideshowMini = () => {
             <img className="d-block w-100" src={baguette} alt="First slide" />
           </div>
           <Carousel.Caption>
-            <h3>La baguette</h3>
-            <p>
-              Chez La Petite Faim, la farine de tradition est un parti pris !
-              Pas d’additifs, pas d’améliorants, pour un produit sain et de
-              qualité. Notre savoir-faire : un pétrissage et un repos de la pâte
-              plus longs pour une Tradition qui se conserve plus longtemps.
-            </p>
+            <div>
+              <h3>La baguette</h3>
+              <p>
+                Chez La Petite Faim, la farine de tradition est un parti pris !
+                Pas d’additifs, pas d’améliorants, pour un produit sain et de
+                qualité. Notre savoir-faire : un pétrissage et un repos de la
+                pâte plus longs pour une Tradition qui se conserve plus
+                longtemps.
+              </p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -39,11 +42,13 @@ const SlideshowMini = () => {
             />
           </div>
           <Carousel.Caption>
-            <h3>La brioche feuilletée</h3>
-            <p>
-              La pâte feuilletée est un produit complexe à réaliser. Il faut de
-              la patience et un savoir-faire technique.
-            </p>
+            <div>
+              <h3>La brioche feuilletée</h3>
+              <p>
+                La pâte feuilletée est un produit complexe à réaliser. Il faut
+                de la patience et un savoir-faire technique.
+              </p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -51,14 +56,16 @@ const SlideshowMini = () => {
             <img className="d-block w-100" src={macaron} alt="Third slide" />
           </div>
           <Carousel.Caption>
-            <h3>Les macarons</h3>
-            <p>
-              En 14 saveurs variant au gré des saisons et de l’inspiration de
-              nos pâtissiers : vanille, chocolat, nutella, caramel au beurre
-              salé, chocolat passion, chocolat framboise, bergamote, coquelicot,
-              noix de coco, réglisse, earl grey, exotique, fraise, chocolat
-              orange…
-            </p>
+            <div>
+              <h3>Les macarons</h3>
+              <p>
+                En 14 saveurs variant au gré des saisons et de l’inspiration de
+                nos pâtissiers : vanille, chocolat, nutella, caramel au beurre
+                salé, chocolat passion, chocolat framboise, bergamote,
+                coquelicot, noix de coco, réglisse, earl grey, exotique, fraise,
+                chocolat orange…
+              </p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -66,12 +73,14 @@ const SlideshowMini = () => {
             <img className="d-block w-100" src={patisserie} alt="First slide" />
           </div>
           <Carousel.Caption>
-            <h3>La pâtisserie</h3>
-            <p>
-              Pâtisseries individuelles ou grandes pièces (5/6 personnes). Nos
-              pâtissiers élaborent, chaque jour, une vingtaine de recettes
-              différentes pour votre plus grand plaisir !
-            </p>
+            <div>
+              <h3>La pâtisserie</h3>
+              <p>
+                Pâtisseries individuelles ou grandes pièces (5/6 personnes). Nos
+                pâtissiers élaborent, chaque jour, une vingtaine de recettes
+                différentes pour votre plus grand plaisir !
+              </p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -79,12 +88,14 @@ const SlideshowMini = () => {
             <img className="d-block w-100" src={sandwich} alt="First slide" />
           </div>
           <Carousel.Caption>
-            <h3>Les sandwichs</h3>
-            <p>
-              Nos sandwichs sont élaborés avec nos pains fabriqués sur place.
-              Ils sont conçus tout au long de la journée pour vous garantir la
-              fraîcheur des ingrédients.
-            </p>
+            <div>
+              <h3>Les sandwichs</h3>
+              <p>
+                Nos sandwichs sont élaborés avec nos pains fabriqués sur place.
+                Ils sont conçus tout au long de la journée pour vous garantir la
+                fraîcheur des ingrédients.
+              </p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -92,11 +103,13 @@ const SlideshowMini = () => {
             <img className="d-block w-100" src={pizza} alt="First slide" />
           </div>
           <Carousel.Caption>
-            <h3>Les pizzas</h3>
-            <p>
-              Nous vous proposons différentes recettes de pizza adaptées aux
-              saisons, conçues avec des produits frais de qualité.
-            </p>
+            <div>
+              <h3>Les pizzas</h3>
+              <p>
+                Nous vous proposons différentes recettes de pizza adaptées aux
+                saisons, conçues avec des produits frais de qualité.
+              </p>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
