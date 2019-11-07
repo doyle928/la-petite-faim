@@ -1,0 +1,335 @@
+.slideshow-mini-desktop {
+    display: none;
+}
+
+.slideshow-mini-container {
+    width: 100vw;
+    height: auto;
+    padding: 50px 12.5% 0;
+    z-index: 1;
+}
+
+.slideshow-mini-container h2 {
+    color: #aaaaaa;
+    font-family: 'Montserrat',
+        sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+.underline-box {
+    width: 60px;
+    height: 3px;
+    background-color: #b4a06e;
+    display: block;
+    margin: 10px auto 0;
+}
+
+.carousel-mini {
+    clip-path: inset(15% 0 0% 0);
+    margin-top: -5px;
+}
+
+.carousel-image-container:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.45);
+    clip-path: inset(15% 0 0% 0);
+}
+
+.carousel-image-container img {
+    transform: translateY(35px);
+}
+
+.carousel-mini h3,
+.carousel-mini p {
+    color: #fff;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+    font-family: 'Playfair Display',
+        serif;
+    font-size: 20px;
+}
+
+.carousel-mini p {
+    font-family: 'Poppins',
+        sans-serif;
+    font-size: 14px;
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+    .carousel-mini {
+        display: none;
+    }
+
+    .slideshow-mini-desktop {
+        display: block;
+    }
+
+    .slideshow-mini-desktop h3 {
+        font-family: 'Playfair Display',
+            serif;
+        color: #1f1f1f;
+        font-size: 36px;
+        padding: 32px 0 15px;
+        margin: 0;
+        letter-spacing: 0;
+    }
+
+    .slideshow-mini-grid {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 375px 325px 325px 325px;
+        background-color: #fff;
+        margin-top: 20px;
+    }
+
+    .grid-img {
+        height: 100%;
+        width: auto;
+        background-position-x: center;
+    }
+
+    .grid-text {
+        padding: 48px 24px;
+        color: #939393;
+        margin: auto;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .grid-text h3 {
+        white-space: nowrap;
+        font-family: 'Playfair Display',
+            serif;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 0;
+        padding-bottom: 18px;
+        color: #939393;
+
+    }
+
+    .grid-text p {
+        font-size: 12px;
+        font-family: 'Poppins',
+            sans-serif;
+    }
+
+    .grid-1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .grid-2 {
+        grid-column: 2;
+        grid-row: 1;
+        background-image: url("../../../styles/images/body/slideshow-mini/baguette.png");
+        background-size: cover;
+    }
+
+    .grid-3 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .grid-4 {
+        grid-column: 1;
+        grid-row: 2;
+        background-image: url("../../../styles/images/body/slideshow-mini/brioche_feuilletee.png");
+        background-size: cover;
+    }
+
+    .grid-5 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .grid-5 h3 {
+        font-size: 18px;
+    }
+
+    .grid-6 {
+        grid-column: 3;
+        grid-row: 2;
+        background-image: url("../../../styles/images/body/slideshow-mini/macaron.png");
+        background-size: cover;
+    }
+
+    .grid-7 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .grid-8 {
+        grid-column: 2;
+        grid-row: 3;
+        background-image: url("../../../styles/images/body/slideshow-mini/patisserie.png");
+        background-size: cover;
+    }
+
+    .grid-9 {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .grid-10 {
+        grid-column: 1;
+        grid-row: 4;
+        background-image: url("../../../styles/images/body/slideshow-mini/sandwich.png");
+        background-size: cover;
+    }
+
+    .grid-11 {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .grid-12 {
+        grid-column: 3;
+        grid-row: 4;
+        background-image: url("../../../styles/images/body/slideshow-mini/pizza.png");
+        background-size: cover;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .carousel-mini {
+        display: none;
+    }
+
+    .slideshow-mini-desktop {
+        display: block;
+    }
+
+    .slideshow-mini-desktop h3 {
+        font-family: 'Playfair Display',
+            serif;
+        color: #1f1f1f;
+        font-size: 36px;
+        padding: 32px 0 15px;
+        margin: 0;
+        letter-spacing: 0;
+    }
+
+    .slideshow-mini-grid {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 375px 325px 325px 325px;
+        background-color: #fff;
+        margin-top: 20px;
+    }
+
+    .grid-img {
+        height: 100%;
+        width: auto;
+        background-position-x: center;
+    }
+
+    .grid-text {
+        padding: 48px 24px;
+        color: #939393;
+        margin: auto;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .grid-text h3 {
+        white-space: nowrap;
+        font-family: 'Playfair Display',
+            serif;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 0;
+        padding-bottom: 18px;
+        color: #939393;
+
+    }
+
+    .grid-text p {
+        font-size: 15px;
+        font-family: 'Poppins',
+            sans-serif;
+    }
+
+    .grid-1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .grid-2 {
+        grid-column: 2;
+        grid-row: 1;
+        background-image: url("../../../styles/images/body/slideshow-mini/baguette.png");
+        background-size: cover;
+    }
+
+    .grid-3 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .grid-4 {
+        grid-column: 1;
+        grid-row: 2;
+        background-image: url("../../../styles/images/body/slideshow-mini/brioche_feuilletee.png");
+        background-size: cover;
+    }
+
+    .grid-5 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .grid-5 h3 {
+        font-size: 24px;
+    }
+
+    .grid-6 {
+        grid-column: 3;
+        grid-row: 2;
+        background-image: url("../../../styles/images/body/slideshow-mini/macaron.png");
+        background-size: cover;
+    }
+
+    .grid-7 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .grid-8 {
+        grid-column: 2;
+        grid-row: 3;
+        background-image: url("../../../styles/images/body/slideshow-mini/patisserie.png");
+        background-size: cover;
+    }
+
+    .grid-9 {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    .grid-10 {
+        grid-column: 1;
+        grid-row: 4;
+        background-image: url("../../../styles/images/body/slideshow-mini/sandwich.png");
+        background-size: cover;
+    }
+
+    .grid-11 {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .grid-12 {
+        grid-column: 3;
+        grid-row: 4;
+        background-image: url("../../../styles/images/body/slideshow-mini/pizza.png");
+        background-size: cover;
+    }
+}
