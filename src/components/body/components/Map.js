@@ -21,7 +21,7 @@ class Map extends React.Component {
         className="discover-map"
         {...this.state.viewport}
         onViewportChange={viewport => this.setState({ viewport })}
-        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+        // mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
       />
     );
   }
