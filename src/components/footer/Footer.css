@@ -129,7 +129,7 @@
 
 .footer-main-updates {
     width: 100%;
-    margin: 0 0 130px;
+    margin: 50px 0 130px;
 }
 
 .footer-updates-container {
@@ -146,11 +146,16 @@
     justify-content: last;
 }
 
+.footer-updates-header div p:first-child {
+    cursor: pointer;
+}
+
 .footer-updates-header span {
     width: 40px;
     height: 40px;
     padding-bottom: 20px;
-    background-color: #e0e0e0;
+    background-color: #fdfbf9;
+    cursor: pointer;
 }
 
 .footer-updates-header span img {
@@ -173,6 +178,7 @@
         sans-serif;
     line-height: 1.5em;
     text-align: left;
+    background-color: transparent;
 }
 
 .footer-updates-header div p:last-child {
@@ -187,13 +193,116 @@
 }
 
 .footer-updates-body {
-    background-color: rgba(255, 255, 255, 0.1);
     padding: 10px;
     height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.footer-updates-body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.footer-updates-body::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.footer-updates-body::-webkit-scrollbar-thumb:hover {
+    background: #b4a06e;
+}
+
+.footer-update-container>div {
+    border-bottom: 2px solid #d9d9d9;
+    padding: 20px 0 0px;
+}
+
+.footer-update-container>div:last-child {
+    padding: 20px 0;
+    border: none !important;
+}
+
+.footer-updates-text-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+.footer-update-one {
+    padding-top: 0 !important;
+}
+
+.footer-update-container p {
+    color: #d9d9d9;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'Poppins',
+        sans-serif;
+    margin: 10px 0;
+}
+
+.footer-update-image-two {
+    width: 100%;
+    height: 400px;
+    background-image: url("../../styles/images/footer/posts/footer-update-1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.footer-update-image-one {
+    width: 100%;
+    min-height: 196px;
+    background-image: url("../../styles/images/body/slideshow/slideshow-6.png");
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.footer-image-container {
+    position: relative;
+}
+
+.footer-image-container div:last-child {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .4);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.footer-image-container:hover div:last-child {
+    height: 100%;
+    opacity: 1;
+    /* border: 4px solid #b4a06e; */
+}
+
+.footer-update-footer p {
+    text-align: right;
+}
+
+.footer-update-footer p a {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 300;
+    font-family: 'Poppins',
+        sans-serif;
+    color: #b4a06e;
+}
+
+.footer-update-footer p a:hover {
+    text-decoration: underline;
+
 }
 
 .footer-social {
-    padding: 120px 40px 100px;
+    padding: 120px 40px 50px;
 }
 
 .footer-social ul {
@@ -230,7 +339,7 @@
 .footer-bottom {
     width: 100%;
     background-color: #0e0e0e;
-    padding: 15px 20px 21px;
+    padding: 15px 20px 22px;
 }
 
 .footer-bottom div p {
@@ -266,4 +375,77 @@
 .footer-bottom div p span a:hover {
     text-decoration: underline;
     color: #474747;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+    .footer-main-grid-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 40px auto;
+
+    }
+
+    .footer-main-image-grid {
+        margin: auto;
+    }
+
+    .footer-section-two {
+        width: 45%;
+        margin: auto;
+    }
+
+    .footer-main-logo {
+        margin: auto;
+    }
+
+    .footer-social {
+        width: 45%;
+        padding: 0;
+        margin: auto;
+    }
+
+    .footer-main-updates {
+        width: 45%;
+        margin: auto;
+        margin-top: 65px;
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .footer-main-grid-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 95%;
+        margin: 20px auto 31px;
+    }
+
+    .footer-main-image-grid {
+        margin: auto;
+    }
+
+    .footer-section-two {
+        width: 22%;
+        margin: auto;
+    }
+
+    .footer-main-logo {
+        margin: auto;
+    }
+
+    .footer-social {
+        width: 22%;
+        padding: 0;
+        margin: auto;
+    }
+
+    .footer-main-updates {
+        width: 30%;
+        margin: auto;
+    }
+
+    .footer-updates-container {
+        width: auto;
+    }
 }

@@ -1,29 +1,44 @@
 import React from "react";
 import ReactMapGL from "react-map-gl";
 import "./Map.css";
-import { useWindowSize } from "../../../hooks/useWindowSize";
+
+import {
+  useWindowSize
+}
+
+from "../../../hooks/useWindowSize";
 
 class Map extends React.Component {
-  state = {
+  state= {
     viewport: {
       width: window.innerWidth,
-      height: 400,
-      latitude: 47.393791,
-      longitude: 0.684449,
-      zoom: 5
+        height: 400,
+        latitude: 47.393791,
+        longitude: 0.684449,
+        zoom: 4
     }
-  };
+  }
+
+  ;
 
   render() {
     require("dotenv").config();
-    return (
-      <ReactMapGL
-        className="discover-map"
-        {...this.state.viewport}
-        onViewportChange={viewport => this.setState({ viewport })}
-        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-      />
-    );
+    return (<ReactMapGL className="discover-map"
+
+        {
+        ...this.state.viewport
+      }
+
+      onViewportChange= {
+        viewport=> this.setState( {
+            viewport
+          }
+
+        )
+      }
+
+      // mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+      />);
   }
 }
 

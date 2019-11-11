@@ -294,7 +294,7 @@
 
     .slideshow-mini-grid {
         display: grid;
-        grid-template-columns: 33% 33% 33%;
+        /* grid-template-columns: 33% 33% 33%; */
         grid-template-rows: 375px 325px 325px 325px;
         background-color: #fff;
         margin-top: 20px;

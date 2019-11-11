@@ -4,3 +4,15 @@ html {
     overflow-x: hidden;
     cursor: default;
 }
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: #b4a06e;
+}

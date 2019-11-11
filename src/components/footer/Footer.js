@@ -17,7 +17,7 @@ import { Twitter, Instagram, YouTube, LinkedIn } from "@material-ui/icons";
 function Footer() {
   const size = useWindowSize();
   const styles = {
-    footerGrid: {
+    footerGridMobile: {
       display: "grid",
       gridTemplateColumns: `${Math.floor((size.width * 0.9) / 3) -
         6}px ${Math.floor((size.width * 0.9) / 3) - 6}px ${Math.floor(
@@ -28,6 +28,28 @@ function Footer() {
         (size.width * 0.9) / 3
       ) - 6}px`
     },
+    footerGridMedium: {
+      display: "grid",
+      gridTemplateColumns: `${Math.floor((size.width * 0.45) / 3) -
+        6}px ${Math.floor((size.width * 0.45) / 3) - 6}px ${Math.floor(
+        (size.width * 0.45) / 3
+      ) - 6}px`,
+      gridTemplateRows: `${Math.floor((size.width * 0.45) / 3) -
+        6}px ${Math.floor((size.width * 0.45) / 3) - 6}px ${Math.floor(
+        (size.width * 0.45) / 3
+      ) - 6}px`
+    },
+    footerGridFull: {
+      display: "grid",
+      gridTemplateColumns: `${Math.floor((size.width * 0.22) / 3) -
+        6}px ${Math.floor((size.width * 0.22) / 3) - 6}px ${Math.floor(
+        (size.width * 0.22) / 3
+      ) - 6}px`,
+      gridTemplateRows: `${Math.floor((size.width * 0.22) / 3) -
+        6}px ${Math.floor((size.width * 0.22) / 3) - 6}px ${Math.floor(
+        (size.width * 0.22) / 3
+      ) - 6}px`
+    },
     mobileSocial: {
       fill: "#0e0e0e",
       stroke: "none",
@@ -36,11 +58,20 @@ function Footer() {
       zIndex: "100"
     }
   };
+  let classSize;
+  if (size.width < 768) {
+    classSize = styles.footerGridMobile;
+  } else if (size.width < 980) {
+    classSize = styles.footerGridMedium;
+  } else if (size.width > 980) {
+    classSize = styles.footerGridFull;
+  }
+
   return (
     <div className="footer-container">
       <div className="footer-main">
         <div className="footer-main-grid-container">
-          <div className="footer-main-image-grid" style={styles.footerGrid}>
+          <div className="footer-main-image-grid" style={classSize}>
             <div className="footer-grid-1 footer-grid-container">
               <img className="footer-grid-img" src={footer1} />
               <div></div>
@@ -78,70 +109,120 @@ function Footer() {
               <div></div>
             </div>
           </div>
-          <div className="footer-main-logo">
-            <img src={logo} />
-          </div>
-          <div className="footer-main-awards">
-            <img src={leMeilleurPatissier} />
-            <div className="footer-awards-svg-container">
-              <svg width="200" height="200">
-                <path
-                  id="curve"
-                  d="M0,50 a1,1 0 0,0 200,0"
-                  fill="transparent"
-                />
-                <text width="200">
-                  <textPath href="#curve">Finaliste saison 8</textPath>
-                </text>
-              </svg>
+          <div className="footer-section-two">
+            <div className="footer-main-logo">
+              <img src={logo} />
+            </div>
+            <div className="footer-main-awards">
+              <img src={leMeilleurPatissier} />
+              <div className="footer-awards-svg-container">
+                <svg width="200" height="200">
+                  <path
+                    id="curve"
+                    d="M0,50 a1,1 0 0,0 200,0"
+                    fill="transparent"
+                  />
+                  <text width="200">
+                    <textPath href="#curve">Finaliste saison 8</textPath>
+                  </text>
+                </svg>
+              </div>
             </div>
           </div>
-        <div className="footer-social">
-          <ul>
-            <li>
-              <span>
-                <Twitter style={styles.mobileSocial} />
-              </span>
-            </li>
-            <li>
-              <span>
-                <Instagram style={styles.mobileSocial} />
-              </span>
-            </li>
-            <li>
-              <span>
-                <YouTube style={styles.mobileSocial} />
-              </span>
-            </li>
-            <li>
-              <span>
-                <svg
-                  class="MuiSvgIcon-root linked-in-icon"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path
-                    fill="black"
-                    d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z"
-                  ></path>
-                </svg>
-              </span>
-            </li>
-          </ul>
-        </div>
+          <div className="footer-social">
+            <ul>
+              <li>
+                <span>
+                  <Twitter style={styles.mobileSocial} />
+                </span>
+              </li>
+              <li>
+                <span>
+                  <Instagram style={styles.mobileSocial} />
+                </span>
+              </li>
+              <li>
+                <span>
+                  <YouTube style={styles.mobileSocial} />
+                </span>
+              </li>
+              <li>
+                <span>
+                  <svg
+                    className="MuiSvgIcon-root linked-in-icon"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      fill="black"
+                      d="M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z"
+                    ></path>
+                  </svg>
+                </span>
+              </li>
+            </ul>
+          </div>
           <div className="footer-main-updates">
             <div className="footer-updates-container">
-              <div className="footer-updates-header">
-                <span>
-                  <img src={logo} />
-                </span>
-                <div>
-                  <p>La Petite Faim</p>
-                  <p>il y a 3 jours</p>
+              <div className="footer-updates-body">
+                <div className="footer-update-container">
+                  <div className="footer-update-one">
+                    <div className="footer-updates-header">
+                      <span>
+                        <img src={logo} />
+                      </span>
+                      <div>
+                        <p>La Petite Faim</p>
+                        <p>il y a 3 jours</p>
+                      </div>
+                    </div>
+                    <div className="footer-image-container">
+                      <div className="footer-update-image-one"></div>
+                      <div></div>
+                    </div>
+                    <div className="footer-update-footer">
+                      <p>
+                        <a href="/">Voir sur LinkedIn</a>&nbsp;&middot;&nbsp;
+                        <a href="/">Partager</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="footer-update-two">
+                    <div className="footer-updates-header">
+                      <span>
+                        <img src={logo} />
+                      </span>
+                      <div>
+                        <p>La Petite Faim</p>
+                        <p>31 oct. 2019</p>
+                      </div>
+                    </div>
+                    <div className="footer-updates-text-container">
+                      <p>
+                        <span role="emoji">🎃🎃🎃</span> Halloween !!{" "}
+                        <span role="emoji">🎃🎃🎃</span>
+                      </p>
+                      <p>Des pâtisseries ou un sort !</p>
+                      <p>
+                        <a href="/">#halloween</a>
+                        <br />
+                        <a href="/">#lapetitefaim</a>
+                      </p>
+                    </div>
+                    <div className="footer-image-container">
+                      <div className="footer-update-image-two"></div>
+                      <div></div>
+                    </div>
+                    <div className="footer-update-footer">
+                      <p>
+                        <a href="/">Voir sur LinkedIn</a>&nbsp;&middot;&nbsp;
+                        <a href="/">Partager</a>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="footer-updates-body"></div>
             </div>
           </div>
         </div>
