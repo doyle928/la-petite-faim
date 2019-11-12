@@ -1,6 +1,6 @@
 import React from "react";
 import "./History.css";
-import historyImage from "../../../styles/images/body/history/history-1.jpg";
+import historyImage from "../../../../styles/images/body/history/history-1.jpg";
 
 function History() {
   return (

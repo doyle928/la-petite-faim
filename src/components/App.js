@@ -1,15 +1,21 @@
 import React from "react";
 import "./App.css";
+import { Router, Route } from "react-router-dom";
 import Header from "./header/Header";
-import Body from "./body/Body";
+import Home from "./pages/home/Home";
+import NosProduits from "./pages/nosProduits/NosProduits";
 import Footer from "./footer/Footer";
+import history from "../history";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Body />
-      <Footer />
+      <Router history={history}>
+        <Header />
+        <Route path="/" exact component={Home} />
+        <Route path="/nos-produits" exact component={NosProduits} />
+        <Footer />
+      </Router>
     </div>
   );
 }

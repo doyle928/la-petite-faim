@@ -12,7 +12,7 @@ import footer8 from "../../styles/images/footer/footer-8.png";
 import footer9 from "../../styles/images/footer/footer-9.png";
 import logo from "../../styles/images/header/la-petite-faim.png";
 import leMeilleurPatissier from "../../styles/images/footer/le-meilleur-patissier.png";
-import { Twitter, Instagram, YouTube, LinkedIn } from "@material-ui/icons";
+import { Twitter, Instagram, YouTube } from "@material-ui/icons";
 
 function Footer() {
   const size = useWindowSize();

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import {
   CloseRounded,
@@ -11,7 +12,7 @@ import wheat from "../../styles/images/header/grain.svg";
 import logoSmall from "../../styles/images/header/logo.png";
 import { useScrollHandler } from "./../../hooks/useScrollHandler";
 
-const Header = () => {
+const Header = props => {
   const styles = {
     mobileSocial: {
       fill: "#fff",
@@ -70,11 +71,21 @@ const Header = () => {
               <CloseRounded style={styles.mobileClose} />
             </span>
           </li>
-          <li>LA MAISON LA PETITE FAIM</li>
-          <li>NOS PRODUITS</li>
-          <li>NOUS TROUVER</li>
-          <li>RECRUTEMENT</li>
-          <li>DEVENIR FRANCHISÉ</li>
+          <li>
+            <Link to="/">LA MAISON LA PETITE FAIM</Link>
+          </li>
+          <li>
+            <Link to="/nos-produits">NOS PRODUITS</Link>
+          </li>
+          <li>
+            <Link to="/">NOUS TROUVER</Link>
+          </li>
+          <li>
+            <Link to="/">RECRUTEMENT</Link>
+          </li>
+          <li>
+            <Link to="/">DEVENIR FRANCHISÉ</Link>
+          </li>
           <li className="header-social-mobile">
             <span className="header-container-twitter">
               <Twitter style={styles.mobileSocial} />
@@ -90,11 +101,31 @@ const Header = () => {
         <img src={logoSmall} className={`logo-small ${logoSmall_class}`} />
         <div>
           <ul>
-            <li>LA MAISON LA PETITE FAIM</li>
-            <li>NOS PRODUITS</li>
-            <li>NOUS TROUVER</li>
-            <li>RECRUTEMENT</li>
-            <li>DEVENIR FRANCHISÉ</li>
+            <li>
+              <NavLink activeClassName="active" exact to="/">
+                LA MAISON LA PETITE FAIM
+              </NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="active" exact to="/nos-produits">
+                NOS PRODUITS
+              </NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="active" exact to="/">
+                NOUS TROUVER
+              </NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="active" exact to="/">
+                RECRUTEMENT
+              </NavLink>
+            </li>
+            <li>
+              <NavLink activeClassName="active" exact to="/">
+                DEVENIR FRANCHISÉ
+              </NavLink>
+            </li>
             <li className="header-social">
               <span className="header-container-twitter">
                 <Twitter style={styles.desktopSocial} />

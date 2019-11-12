@@ -1,11 +1,11 @@
 import React from "react";
 import "./SlideshowMini.css";
-import baguette from "../../../styles/images/body/slideshow-mini/baguette.png";
-import briocheFeuillete from "../../../styles/images/body/slideshow-mini/brioche_feuilletee.png";
-import macaron from "../../../styles/images/body/slideshow-mini/macaron.png";
-import patisserie from "../../../styles/images/body/slideshow-mini/patisserie.png";
-import pizza from "../../../styles/images/body/slideshow-mini/pizza.png";
-import sandwich from "../../../styles/images/body/slideshow-mini/sandwich.png";
+import baguette from "../../../../styles/images/body/slideshow-mini/baguette.png";
+import briocheFeuillete from "../../../../styles/images/body/slideshow-mini/brioche_feuilletee.png";
+import macaron from "../../../../styles/images/body/slideshow-mini/macaron.png";
+import patisserie from "../../../../styles/images/body/slideshow-mini/patisserie.png";
+import pizza from "../../../../styles/images/body/slideshow-mini/pizza.png";
+import sandwich from "../../../../styles/images/body/slideshow-mini/sandwich.png";
 
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -106,7 +106,7 @@ const SlideshowMini = () => {
             <div>
               <h3>Les pizzas</h3>
               <p>
-                Nous vous proposons différentes recettes de pizza adaptées aux
+                Nous vous proposons différentes recettes de pizzas adaptées aux
                 saisons, conçues avec des produits frais de qualité.
               </p>
             </div>

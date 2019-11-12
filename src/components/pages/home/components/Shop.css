@@ -54,25 +54,25 @@
 }
 
 .shop-image-one .shop-img {
-    background-image: url("../../../styles/images/body/shop/shop-1.png");
+    background-image: url("../../../../styles//images/body/shop/shop-1.png");
     background-size: cover;
     background-position: center;
 }
 
 .shop-image-two .shop-img {
-    background-image: url("../../../styles/images/body/shop/shop-2.png");
+    background-image: url("../../../../styles//images/body/shop/shop-2.png");
     background-size: cover;
     background-position: center;
 }
 
 .shop-image-three .shop-img {
-    background-image: url("../../../styles/images/body/shop/shop-5.png");
+    background-image: url("../../../../styles//images/body/shop/shop-5.png");
     background-size: cover;
     background-position: center;
 }
 
 .shop-image-four .shop-img {
-    background-image: url("../../../styles/images/body/shop/shop-6.png");
+    background-image: url("../../../../styles//images/body/shop/shop-6.png");
     background-size: cover;
     background-position: center;
 }

@@ -16,3 +16,7 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-thumb:hover {
     background: #b4a06e;
 }
+
+* {
+    -webkit-font-smoothing: antialiased;
+}

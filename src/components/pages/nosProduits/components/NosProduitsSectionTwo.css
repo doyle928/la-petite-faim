@@ -1,0 +1,126 @@
+.nos-produits-section-two-container {
+    width: 100%;
+    box-shadow: 0px 12px 18px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.nos-produits-section-two-container>div:first-child {
+    background: linear-gradient(#0e2539, #214263);
+    width: 100%;
+}
+
+.nos-produits-section-two-slideshow-container {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.nos-produits-carousel-image-container:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* clip-path: inset(15% 0 0% 0); */
+}
+
+.nos-produits-carousel-mini div h3,
+.nos-produits-carousel-mini div p {
+    color: #fff;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+    font-family: 'Playfair Display',
+        serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+.nos-produits-carousel-mini div h3 {
+    padding-bottom: 5px;
+}
+
+.nos-produits-carousel-mini div p {
+    font-family: 'Poppins',
+        sans-serif;
+    font-size: 11px;
+}
+
+.nos-produits-carousel-mini>.carousel-indicators {
+    margin-bottom: -2%;
+
+}
+
+.nos-produits-carousel-mini .carousel-control-next {
+    right: -10px;
+}
+
+.nos-produits-carousel-mini .carousel-control-prev {
+    left: -10px;
+}
+
+.nos-produits-section-two-container-bottom-edge {
+    width: 100vw;
+    height: 50px;
+    background-color: #214263;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+    margin-top: -1px;
+}
+
+@media only screen and (max-width: 340px) {
+    .nos-produits-carousel-mini div p {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 580px) and (max-width: 800px) {
+    .nos-produits-carousel-mini div h3 {
+        font-size: 17px;
+        padding-bottom: 10px;
+    }
+
+    .nos-produits-carousel-mini div p {
+        font-size: 14px;
+    }
+
+    .nos-produits-carousel-mini>.carousel-indicators {
+        margin-bottom: -1%;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 980px) {
+    .nos-produits-carousel-mini div h3 {
+        font-size: 22px;
+        padding-bottom: 12px;
+    }
+
+    .nos-produits-carousel-mini div p {
+        font-size: 16px;
+    }
+
+    .nos-produits-carousel-mini>.carousel-indicators {
+        margin-bottom: -1%;
+
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .nos-produits-section-two-container-bottom-edge {
+        height: 100px;
+    }
+
+    .nos-produits-carousel-mini div h3 {
+        font-size: 22px;
+        padding-bottom: 12px;
+    }
+
+    .nos-produits-carousel-mini div p {
+        font-size: 16px;
+    }
+
+    .nos-produits-carousel-mini>.carousel-indicators {
+        margin-bottom: 0;
+
+    }
+}

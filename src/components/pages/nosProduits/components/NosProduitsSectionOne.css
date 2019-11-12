@@ -1,0 +1,25 @@
+.nos-produits-section-one-container>div {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.nos-produits-section-one-container>div>h2 {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 18px;
+    padding: 25px 0 15px;
+    font-family: 'Montserrat',
+        sans-serif;
+    letter-spacing: 2px;
+}
+
+.nos-produits-section-one-container>div>p {
+    color: #212529;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Poppins',
+        sans-serif;
+    line-height: 1.5em;
+    padding-bottom: 1em;
+    font-weight: 400;
+}
