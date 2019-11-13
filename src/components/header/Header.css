@@ -159,7 +159,7 @@
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1080px) {
+@media only screen and (min-width: 800px) and (max-width: 1080px) {
 
     .header-mobile,
     .header-social-mobile,
@@ -194,33 +194,34 @@
         transition: .5s ease-in-out;
     }
 
-    ul {
+    .header-desktop div ul {
         display: flex;
         justify-content: space-evenly;
         padding: 0 50px;
     }
 
-    li {
+    .header-desktop div ul li {
         list-style: none;
         cursor: pointer;
 
     }
 
-    li a {
+    .header-desktop div ul li a {
         font-size: 14px;
         transition: .15s ease-in-out;
         color: #2d2d2d;
         font-family: 'Playfair Display',
             serif;
         text-decoration: none;
+        white-space: nowrap;
     }
 
-    li:hover a {
+    .header-desktop div ul li:hover a {
         color: #b4a06e;
         text-decoration: none;
     }
 
-    .active {
+    .header-desktop div ul .active {
         color: #b4a06e !important;
     }
 
@@ -295,13 +296,13 @@
         transition: .5s ease-in-out;
     }
 
-    ul {
+    .header-desktop div ul {
         display: flex;
         justify-content: space-evenly;
         padding: 0 50px;
     }
 
-    li {
+    .header-desktop div ul li {
         list-style: none;
         cursor: pointer;
 
@@ -314,14 +315,15 @@
         font-family: 'Playfair Display',
             serif;
         text-decoration: none;
+        white-space: nowrap;
     }
 
-    li:hover a {
+    .header-desktop div ul li:hover a {
         color: #b4a06e;
         text-decoration: none;
     }
 
-    .active {
+    .header-desktop div ul .active {
         color: #b4a06e !important;
     }
 

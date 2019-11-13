@@ -3,6 +3,9 @@
     box-shadow: 0px 12px 18px 16px rgba(0, 0, 0, 0.3);
 }
 
+.nos-produits-section-two-selection-container {
+    display: none;
+}
 
 .nos-produits-section-two-container>div:first-child {
     background: linear-gradient(#0e2539, #214263);
@@ -110,17 +113,85 @@
         height: 100px;
     }
 
-    .nos-produits-carousel-mini div h3 {
-        font-size: 22px;
-        padding-bottom: 12px;
+    .nos-produits-section-two-slideshow-container {
+        display: none;
     }
 
-    .nos-produits-carousel-mini div p {
+    .nos-produits-section-two-selection-container {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+        padding: 70px 0 0;
+    }
+
+    .nos-produits-section-two-selection-container ul {
+        display: flex;
+        flex-direction: column;
+        width: 21%;
+        padding: 0;
+    }
+
+    .nos-produits-section-two-selection-container ul li {
+        color: #fff;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+        font-family: 'Playfair Display',
+            serif;
+        border-width: 2px !important;
+        border-radius: 0px;
+        letter-spacing: 2px;
+        padding: 8px 20px;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: left;
+        background-color: #b19f6f;
+        box-shadow: 8px 8px 0px 0px rgba(255, 255, 255, 0.1);
+        margin: 0 auto 13% 0;
+        list-style: none;
+        cursor: pointer;
+
+    }
+
+    .nos-produits-section-two-selection-container ul li:hover {
+        text-decoration: underline;
+    }
+
+    .nos-produits-section-two-selection-img-text-container {
+        width: 73%;
+        position: relative;
+        right: -87%;
+        opacity: 0;
+    }
+
+    .nos-produits-section-two-selection-img-text-container p {
+        color: #fff;
+        width: 100%;
         font-size: 16px;
+        font-family: 'Poppins',
+            sans-serif;
+        line-height: 2em;
+        padding-bottom: 1em;
+        font-weight: 400;
+        text-align: center;
     }
 
-    .nos-produits-carousel-mini>.carousel-indicators {
-        margin-bottom: 0;
+    .nos-produits-section-two-selection-img-text-container img {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
 
     }
+
+    .slide {
+        right: 0;
+        transition: .5s ease-out;
+        opacity: 1;
+    }
+
+    .nos-produits-section-two-selection-container ul .active {
+        background-color: transparent;
+        color: #fff !important;
+        border: 2px solid #fff;
+    }
+
 }

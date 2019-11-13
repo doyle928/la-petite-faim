@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import "./NosProduitsSectionTwo.css";
 
 import lePain from "../../../../styles/images/nos-produits/section-two/slideshow-1.png";
@@ -11,6 +11,62 @@ import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function NosProduitsSectionTwo() {
+  const items = [
+    { id: 0, target: "LE PAIN" },
+    { id: 1, target: "LA PÂTISSERIE" },
+    { id: 2, target: "LA BRIOCHE FEUILLETÉE" },
+    { id: 3, target: "LES MACARONS" },
+    { id: 4, target: "LE TRAITEUR" }
+  ];
+  const imageArray = [
+    {
+      img: lePain,
+      string: `Tous nos pains sont fabriqués sur place à partir de farine de tradition 100% française et sans additifs, chaque jour par nos boulangers.`
+    },
+    {
+      img: laPatisserie,
+      string: `Flans, Paris-Brest, éclairs, tartelettes, clafoutis, tartes fines aux pommes, … Plus de 20 pâtisseries différentes élaborées chaque jour pour ravir vos papilles !`
+    },
+    {
+      img: laBriocheFeuilletee,
+      string: `Croustillante, moelleuse et caramélisée à souhait, notre brioche feuilletée vous fera fondre de plaisir.`
+    },
+    {
+      img: lesMacarons,
+      string: `Une coque croquante et moelleuse, une texture différente à chaque parfum.  Un délice à chaque bouchée !`
+    },
+    {
+      img: leTraiteur,
+      string: `Nos produits traiteur sont élaborés avec nos pains fabriqués sur place.  Les produits sont frais et cuisinés sur place tout au long de la journée.`
+    }
+  ];
+
+  const [active, setActive] = useState(null);
+  const [imageShow, setImage] = useState(0);
+  if (!imageShow) {
+    setImage(imageArray[0]);
+    setActive(0);
+  }
+  console.log("imageShow", imageShow);
+  console.log("active", active);
+
+  const NavLink = ({ id, target, isActive, onClick }) => (
+    <li
+      onClick={useCallback(() => onClick(id), [id])}
+      className={`navLink ${isActive ? "active" : ""}`}
+    >
+      {target}
+    </li>
+  );
+
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    if (slide === true) {
+      setSlide(!slide);
+    }
+  }, [slide]);
+  const slide_class = slide ? "" : "slide";
+
   return (
     <div className="nos-produits-section-two-container">
       <div>
@@ -106,6 +162,28 @@ function NosProduitsSectionTwo() {
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
+        </div>
+        <div className="nos-produits-section-two-selection-container">
+          <ul>
+            {items.map(item => (
+              <NavLink
+                {...item}
+                onClick={() => {
+                  setImage(imageArray[item.id]);
+                  setActive(item.id);
+                  setSlide(!slide);
+                }}
+                isActive={active === item.id}
+                key={item.id}
+              />
+            ))}
+          </ul>
+          <div
+            className={`nos-produits-section-two-selection-img-text-container ${slide_class}`}
+          >
+            <p>{imageShow.string}</p>
+            <img src={imageShow.img} />
+          </div>
         </div>
       </div>
       <div className="nos-produits-section-two-container-bottom-edge"></div>

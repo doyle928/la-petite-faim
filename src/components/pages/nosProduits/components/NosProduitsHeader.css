@@ -39,3 +39,14 @@
     z-index: 10;
     width: 100vw;
 }
+
+@media only screen and (min-width: 800px) {
+    .nos-produits-header-container>div:first-child {
+        margin-top: 199px;
+        height: 192px;
+    }
+
+    .nos-produits-header-container>div>div>h3 {
+        padding: 36px 0;
+    }
+}
