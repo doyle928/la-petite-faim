@@ -10,6 +10,7 @@ function NosProduits() {
       <NosProduitsHeader />
       <NosProduitsSectionOne />
       <NosProduitsSectionTwo />
+      <div className="nos-produits-body-background"></div>
     </div>
   );
 }

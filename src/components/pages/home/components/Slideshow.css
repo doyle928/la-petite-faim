@@ -5,9 +5,23 @@
     background-color: #fff;
 }
 
+.particle-container {
+    display: none;
+}
+
+.slideshow-container>div:first-child {
+    position: relative;
+}
 
 @media only screen and (min-width: 768px) {
     .slideshow-container {
         padding: 200px 12.5% 0;
+    }
+
+    .particle-container {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
     }
 }

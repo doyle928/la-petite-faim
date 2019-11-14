@@ -26,6 +26,7 @@ const Header = props => {
       width: 30
     },
     mobileClose: {
+      fill: "#fff",
       textAlign: "right",
       height: 30,
       width: 30
@@ -62,7 +63,10 @@ const Header = props => {
           <MenuRounded style={styles.mobileHamburger} />
         </span>
       </div>
-      <div className={menuBackground_class}></div>
+      <div
+        className={menuBackground_class}
+        onClick={() => setMenu(false)}
+      ></div>
       <div className={`menu-mobile ${menu_class}`}>
         <ul>
           <li className="menu-close">
@@ -72,19 +76,34 @@ const Header = props => {
             </span>
           </li>
           <li>
-            <Link to="/">LA MAISON LA PETITE FAIM</Link>
+            <Link to="/" onClick={() => setMenu(false)}>
+              LA MAISON LA PETITE FAIM
+            </Link>
           </li>
           <li>
-            <Link to="/nos-produits">NOS PRODUITS</Link>
+            <Link to="/nos-produits" onClick={() => setMenu(false)}>
+              NOS PRODUITS
+            </Link>
           </li>
           <li>
-            <Link to="/">NOUS TROUVER</Link>
+            <Link to="/" onClick={() => setMenu(false)}>
+              NOUS TROUVER
+            </Link>
           </li>
           <li>
-            <Link to="/">RECRUTEMENT</Link>
+            <Link to="/" onClick={() => setMenu(false)}>
+              RECRUTEMENT
+            </Link>
           </li>
           <li>
-            <Link to="/">DEVENIR FRANCHISÉ</Link>
+            <Link to="/" onClick={() => setMenu(false)}>
+              DEVENIR FRANCHISÉ
+            </Link>
+          </li>
+          <li>
+            <Link to="/" onClick={() => setMenu(false)}>
+              NOUS CONTACTER
+            </Link>
           </li>
           <li className="header-social-mobile">
             <span className="header-container-twitter">

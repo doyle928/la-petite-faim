@@ -1,6 +1,12 @@
 import React, { useCallback, useState, useEffect } from "react";
 import "./NosProduitsSectionTwo.css";
 
+import lePainSlideShowMini from "../../../../styles/images/nos-produits/section-two/slideshow-mini/slideshow-mini-1.png";
+import laPatisserieSlideShowMini from "../../../../styles/images/nos-produits/section-two/slideshow-mini/slideshow-mini-2.png";
+import laBriocheFeuilleteeSlideShowMini from "../../../../styles/images/nos-produits/section-two/slideshow-mini/slideshow-mini-3.png";
+import lesMacaronsSlideShowMini from "../../../../styles/images/nos-produits/section-two/slideshow-mini/slideshow-mini-4.png";
+import leTraiteurSlideShowMini from "../../../../styles/images/nos-produits/section-two/slideshow-mini/slideshow-mini-5.png";
+
 import lePain from "../../../../styles/images/nos-produits/section-two/slideshow-1.png";
 import laPatisserie from "../../../../styles/images/nos-produits/section-two/slideshow-2.png";
 import laBriocheFeuilletee from "../../../../styles/images/nos-produits/section-two/slideshow-3.png";
@@ -74,7 +80,11 @@ function NosProduitsSectionTwo() {
           <Carousel className="nos-produits-carousel-mini" fade={true}>
             <Carousel.Item>
               <div className="nos-produits-carousel-image-container">
-                <img className="d-block w-100" src={lePain} alt="First slide" />
+                <img
+                  className="d-block w-100"
+                  src={lePainSlideShowMini}
+                  alt="First slide"
+                />
               </div>
               <Carousel.Caption>
                 <div>
@@ -91,7 +101,7 @@ function NosProduitsSectionTwo() {
               <div className="nos-produits-carousel-image-container">
                 <img
                   className="d-block w-100"
-                  src={laPatisserie}
+                  src={laPatisserieSlideShowMini}
                   alt="Third slide"
                 />
               </div>
@@ -110,7 +120,7 @@ function NosProduitsSectionTwo() {
               <div className="nos-produits-carousel-image-container">
                 <img
                   className="d-block w-100"
-                  src={laBriocheFeuilletee}
+                  src={laBriocheFeuilleteeSlideShowMini}
                   alt="Third slide"
                 />
               </div>
@@ -128,7 +138,7 @@ function NosProduitsSectionTwo() {
               <div className="nos-produits-carousel-image-container">
                 <img
                   className="d-block w-100"
-                  src={lesMacarons}
+                  src={lesMacaronsSlideShowMini}
                   alt="First slide"
                 />
               </div>
@@ -146,7 +156,7 @@ function NosProduitsSectionTwo() {
               <div className="nos-produits-carousel-image-container">
                 <img
                   className="d-block w-100"
-                  src={leTraiteur}
+                  src={leTraiteurSlideShowMini}
                   alt="First slide"
                 />
               </div>

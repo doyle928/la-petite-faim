@@ -1,6 +1,13 @@
+.nos-produits-section-one-container {
+    width: 100%;
+    background-color: #fff;
+    padding: 50px 0;
+}
+
 .nos-produits-section-one-container>div {
     width: 80%;
-    margin: 50px auto;
+    width: 80%;
+    margin: auto;
 }
 
 .nos-produits-section-one-container>div>h2 {
