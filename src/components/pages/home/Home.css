@@ -5,3 +5,13 @@
 SlideshowMini {
     background-color: #f7f7f7;
 }
+
+.home-body-particle-container {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .home-body-particle-container {
+        display: block;
+    }
+}

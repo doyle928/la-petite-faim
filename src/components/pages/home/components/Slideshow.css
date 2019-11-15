@@ -1,12 +1,8 @@
 .slideshow-container {
     width: 100vw;
     height: auto;
-    padding: 84px 12.5% 0;
+    padding: 79px 12.5% 0;
     background-color: #fff;
-}
-
-.particle-container {
-    display: none;
 }
 
 .slideshow-container>div:first-child {
@@ -18,10 +14,5 @@
         padding: 200px 12.5% 0;
     }
 
-    .particle-container {
-        display: block;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-    }
+
 }

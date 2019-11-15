@@ -22,8 +22,9 @@
     font-family: 'Love-Beard',
         Fallback,
         sans-serif;
-    font-size: 3rem;
+    font-size: 2.75rem;
 }
+
 
 .header-description {
     display: flex;

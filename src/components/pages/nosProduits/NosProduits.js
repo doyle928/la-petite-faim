@@ -3,6 +3,8 @@ import "./NosProduits.css";
 import NosProduitsHeader from "./components/NosProduitsHeader";
 import NosProduitsSectionOne from "./components/NosProduitsSectionOne";
 import NosProduitsSectionTwo from "./components/NosProduitsSectionTwo";
+import NosProduitsMenu from "./components/NosProduitsMenu";
+import NosProduitsLoyalty from "./components/NosProduitsLoyalty";
 
 function NosProduits() {
   return (
@@ -10,6 +12,8 @@ function NosProduits() {
       <NosProduitsHeader />
       <NosProduitsSectionOne />
       <NosProduitsSectionTwo />
+      <NosProduitsMenu />
+      <NosProduitsLoyalty />
       <div className="nos-produits-body-background"></div>
     </div>
   );

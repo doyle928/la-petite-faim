@@ -7,12 +7,12 @@
 .nos-produits-header-container>div:first-child {
     background-image: url("../../../../styles/images/nos-produits/header/header-1.png");
     background-position: center;
-    background-position-y: 30%;
+    /* background-position-y: 30%; */
     background-size: cover;
     width: 100vw;
     height: 145px;
-    margin-top: 84px;
-    opacity: 0;
+    margin-top: 79px;
+    /* opacity: 0; */
     transition: 1.5s ease-out;
 
 }
@@ -20,6 +20,12 @@
 .nos-produits-header-loaded {
     opacity: 1 !important;
     background-position-y: center !important;
+}
+
+.nos-produits-header-unloaded {
+    background-position-y: 30% !important;
+    opacity: 0 !important;
+    transition: 0s !important;
 }
 
 .nos-produits-header-container>div>div {

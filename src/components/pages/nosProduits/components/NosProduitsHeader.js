@@ -3,8 +3,18 @@ import "./NosProduitsHeader.css";
 
 function NosProduitsHeader() {
   const [loaded, setLoaded] = useState(0);
-  useEffect(() => setLoaded(true), []);
-  const loaded_class = loaded ? "nos-produits-header-loaded" : "";
+
+  useEffect(() => {
+    setLoaded(true);
+    return () => {
+      setLoaded(false);
+    };
+  }, [loaded]);
+
+  const loaded_class = loaded
+    ? "nos-produits-header-loaded"
+    : "nos-produits-header-unloaded";
+
   return (
     <div className="nos-produits-header-container">
       <div className={loaded_class}>
