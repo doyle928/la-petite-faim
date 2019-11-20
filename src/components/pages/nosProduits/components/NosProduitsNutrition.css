@@ -1,0 +1,83 @@
+.nos-produits-nutrition-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-bottom: 80px;
+}
+
+.nos-produits-nutrition-shadow-background {
+    width: 100vw;
+    height: 1px;
+    box-shadow: 0px 2px 17px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 120px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.nos-produits-nutrition-header {
+
+    margin: 110px auto 80px;
+    width: 80%;
+}
+
+.nos-produits-nutrition-header>h2 {
+    text-align: center;
+    color: #a8a8a8;
+    font-size: 18px;
+    font-family: 'Montserrat',
+        sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.nos-produits-nutrition-header>div {
+    width: 60px;
+    height: 3px;
+    background-color: #b19f6f;
+    margin: 0 auto 23px;
+}
+
+.nos-produits-nutrition-header>p {
+    text-align: center;
+    color: #939393;
+    width: 100%;
+    font-size: 17px;
+    font-family: 'Montserrat',
+        sans-serif;
+    line-height: 1.8em;
+    padding-bottom: 1em;
+    font-weight: 400;
+}
+
+.nos-produits-nutrition-item-container {
+    width: 80%;
+    background-image: radial-gradient(circle at center, #ffffff 50%, rgba(155, 155, 155, 0.1) 100%);
+    box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    padding: 40px 20px 20px;
+}
+
+
+.nos-produits-nutrition-item-container>h3 {
+    font-family: 'Playfair Display',
+        serif;
+    color: #b19f6f;
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0 0 50px;
+    letter-spacing: 0;
+    font-variant: small-caps;
+    letter-spacing: 4px;
+}
+
+.nos-produits-nutrition-item-container>p {
+    text-align: center;
+    color: #212529;
+    font-size: 16px;
+    font-family: 'Poppins',
+        sans-serif;
+    line-height: 1em;
+    padding-bottom: 1em;
+    font-weight: 400;
+}

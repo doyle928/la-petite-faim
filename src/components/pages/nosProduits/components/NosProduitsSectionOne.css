@@ -1,7 +1,7 @@
 .nos-produits-section-one-container {
     width: 100%;
     background-color: #fff;
-    padding: 50px 0;
+    padding: 90px 0;
 }
 
 .nos-produits-section-one-container>div {
@@ -18,6 +18,15 @@
     font-family: 'Montserrat',
         sans-serif;
     letter-spacing: 2px;
+    font-weight: 700;
+
+}
+
+.nos-produits-section-one-container>div>div {
+    width: 60px;
+    height: 3px;
+    background-color: #b19f6f;
+    margin: 0 auto 23px;
 }
 
 .nos-produits-section-one-container>div>p {
@@ -27,6 +36,6 @@
     font-family: 'Poppins',
         sans-serif;
     line-height: 1.5em;
-    padding-bottom: 1em;
+    padding: 1em 0;
     font-weight: 400;
 }

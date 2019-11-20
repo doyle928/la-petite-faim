@@ -6,6 +6,7 @@ function NosProduitsSectionOne() {
     <div className="nos-produits-section-one-container">
       <div>
         <h2>NOTRE GAMME</h2>
+        <div></div>
         <p>
           Nous n’utilisons que des ingrédients de haute qualité pour satisfaire
           notre clientèle

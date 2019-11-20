@@ -5,6 +5,7 @@ import NosProduitsSectionOne from "./components/NosProduitsSectionOne";
 import NosProduitsSectionTwo from "./components/NosProduitsSectionTwo";
 import NosProduitsMenu from "./components/NosProduitsMenu";
 import NosProduitsLoyalty from "./components/NosProduitsLoyalty";
+import NosProduitsNutrition from "./components/NosProduitsNutrition";
 
 function NosProduits() {
   return (
@@ -14,6 +15,7 @@ function NosProduits() {
       <NosProduitsSectionTwo />
       <NosProduitsMenu />
       <NosProduitsLoyalty />
+      <NosProduitsNutrition />
       <div className="nos-produits-body-background"></div>
     </div>
   );

@@ -1,51 +1,51 @@
-.nos-produits-header-container {
+.nous-trouver-header-container {
     position: relative;
     width: 100vw;
     background-color: #214263;
 }
 
-.nos-produits-header-container>div:first-child {
-    background-image: url("../../../../styles/images/nos-produits/header/header-1.png");
+.nous-trouver-header-container>div:first-child {
+    background-image: url("../../../../styles/images/nous-trouver/header/header-nous-touver.png");
     background-position: center;
     /* background-position-y: 30%; */
     background-size: cover;
     width: 100vw;
-    height: 145px;
+    height: 200px;
     margin-top: 79px;
     /* opacity: 0; */
     transition: 1.5s ease-out;
 
 }
 
-.nos-produits-header-loaded {
+.nous-trouver-header-loaded {
     opacity: 1 !important;
-    background-position-y: center !important;
+    background-position-y: 50% !important;
 }
 
-.nos-produits-header-unloaded {
+.nous-trouver-header-unloaded {
     background-position-y: 30% !important;
     opacity: 0 !important;
     transition: 0s !important;
 }
 
-.nos-produits-header-container>div>div {
+.nous-trouver-header-container>div>div {
     width: 80%;
     max-width: 800px;
     margin: 20px auto;
 
 }
 
-.nos-produits-header-container>div>div>h3 {
-    font-size: 43px;
+.nous-trouver-header-container>div>div>h3 {
+    font-size: 28px;
     color: #fff;
     font-family: 'Playfair Display',
         serif;
     line-height: 1.3em;
-    padding: 10px 0;
+    padding: 14px 0;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.45);
 }
 
-.nos-produits-header-svg {
+.nous-trouver-header-svg {
     background-image: url("../../../../styles/images/header-border.svg");
     position: absolute;
     bottom: 0;
@@ -56,13 +56,24 @@
     width: 100vw;
 }
 
-@media only screen and (min-width: 800px) {
-    .nos-produits-header-container>div:first-child {
-        margin-top: 199px;
-        height: 192px;
+@media only screen and (min-width: 430px) and (max-width: 800px) {
+    .nous-trouver-header-container>div:first-child {
+        height: 190px;
     }
 
-    .nos-produits-header-container>div>div>h3 {
-        padding: 36px 0;
+    .nous-trouver-header-container>div>div>h3 {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .nous-trouver-header-container>div:first-child {
+        margin-top: 199px;
+        height: 215px;
+    }
+
+    .nous-trouver-header-container>div>div>h3 {
+        padding: 40px 0;
+        font-size: 43px;
     }
 }

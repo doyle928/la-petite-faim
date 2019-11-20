@@ -40,6 +40,8 @@
     padding: 0;
     margin: 0;
     letter-spacing: 2px;
+    font-weight: 700;
+
 }
 
 .header-description-one {
@@ -85,7 +87,6 @@
     background-size: cover;
     background-position-x: -350px;
     z-index: 500;
-    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.65);
 }
 
 .menu-show-black-true {
@@ -125,6 +126,7 @@
     left: 0;
     height: 100vh;
     width: 75vw;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.65);
 }
 
 .menu-close {

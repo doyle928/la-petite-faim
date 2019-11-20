@@ -5,7 +5,7 @@
 }
 
 .nos-produits-menu-header {
-    padding: 0 30px 80px;
+    margin: 0 30px 80px;
 }
 
 .nos-produits-menu-header>h2 {
@@ -16,6 +16,7 @@
         sans-serif;
     letter-spacing: 2px;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .nos-produits-menu-header>div {
@@ -49,7 +50,6 @@
 
 .nos-produits-menu-item-container h3:last-of-type {
     font-size: 25px;
-    ;
 }
 
 .nos-produits-menu-item-container p {
@@ -62,4 +62,29 @@
     padding: 0;
     margin-bottom: 32px;
     font-weight: 400;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 980px) {
+    .nos-produits-menu-container>div:last-child {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nos-produits-menu-item-container {
+        width: 40%;
+        margin: 0 auto 40px;
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .nos-produits-menu-container>div:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .nos-produits-menu-item-container {
+        width: 20%;
+        margin: 0 auto 40px;
+    }
 }

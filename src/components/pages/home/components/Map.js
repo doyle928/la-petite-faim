@@ -24,7 +24,7 @@ class Map extends React.Component {
             viewport
           })
         }
-        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+        // mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
       />
     );
   }
