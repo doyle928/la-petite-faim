@@ -1,0 +1,281 @@
+.nous-trouver-stores-container {
+    padding: 100px 0;
+}
+
+.nous-trouver-store-selector-container {
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nous-trouver-store-selector-container>div:first-child {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nous-trouver-store-selector-container>div>p {
+    margin: 0;
+    text-align: left;
+    /* padding: 10px 20px; */
+    color: #444;
+    font-size: 16px;
+    font-family: 'Poppins',
+        sans-serif;
+    font-weight: 300;
+    padding: 10px;
+    font-weight: 400px
+}
+
+.nous-trouver-store-selector-container>div:first-child {
+    width: 100%;
+    border: 2px solid #b4a06e;
+    border-radius: 3px;
+}
+
+.nous-trouver-expand {
+    display: block !important;
+}
+
+.nous-trouver-unexpand {
+    display: none !important;
+}
+
+.nous-trouver-store-option-container {
+    height: 0;
+    display: none;
+    transition: 0.25s ease-in-out !important;
+    position: absolute;
+    top: 48px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.nous-trouver-store-show {
+    height: auto !important;
+    display: block !important;
+    z-index: 100;
+    border: 2px solid #b4a06e;
+}
+
+.nous-trouver-store-option-container>input {
+    display: block;
+    width: -webkit-fill-available;
+    margin: 10px;
+    padding: 5px;
+}
+
+.nous-trouver-store-option-container>ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nous-trouver-store-option-container>ul>li {
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    color: #444;
+    font-size: 16px;
+    font-family: 'Poppins',
+        sans-serif;
+    font-weight: 300;
+}
+
+.nous-trouver-store-option-container>ul>li:hover {
+    background-color: #b4a06e;
+    cursor: pointer;
+}
+
+.nous-trouver-store-list>ul {
+    width: 92%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.nous-trouver-store-list>ul>li {
+    background-color: #f9f9f9;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    padding: 10px;
+    list-style-type: none;
+    margin: 30px 0;
+}
+
+.nous-trouver-store-list>ul>li>div:first-child {
+    width: 150px;
+    height: 143px;
+    margin: 0 auto;
+}
+
+.nous-trouver-store-list>ul>li>div>img {
+    height: 75px;
+    width: auto;
+    opacity: .3;
+    margin: 33px 0 0;
+}
+
+.nous-trouver-store-list>ul>li>div:last-child {
+    width: 100%;
+}
+
+.nous-trouver-store-list>ul>li>div>h3 {
+    display: block;
+    text-align: center;
+    color: #1f1f1f;
+    font-family: 'Playfair Display',
+        serif;
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 16px;
+}
+
+.nous-trouver-store-list>ul>li>div>p {
+    text-align: center;
+    color: #1f1f1f;
+    font-size: 16px;
+    font-family: 'Poppins',
+        sans-serif;
+    /* line-height: 1.5em;
+    padding-bottom: 1em; */
+    font-weight: 400;
+    margin: 5px 0 16px
+}
+
+.nous-trouver-store-list>ul>li>div>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.nous-trouver-store-list>ul>li>div>div>span {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.nous-trouver-store-list>ul>li>div>div>span>a {
+    text-align: center;
+    color: #b4a06e;
+    font-size: 16px;
+    font-family: 'Poppins',
+        sans-serif;
+
+    font-weight: 400;
+}
+
+.nous-trouver-stores-map-container {
+    display: none;
+}
+
+@media only screen and (min-width: 825px) and (max-width: 980px) {
+    .nous-trouver-store-list>ul>li {
+        display: flex;
+        padding-right: 20px;
+    }
+
+    .nous-trouver-store-list>ul>li>div:last-child {
+        width: 75%;
+        margin: auto;
+    }
+
+    .nous-trouver-store-list>ul>li>div>h3 {
+        margin-top: 8px;
+        text-align: left;
+
+    }
+
+    .nous-trouver-store-list>ul>li>div>p {
+        text-align: left;
+
+    }
+
+    .nous-trouver-store-list>ul>li>div>div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nous-trouver-store-list>ul>li>div>div>span {
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .nous-trouver-store-list>ul>li>div>div>span>a {
+        /* text-align: left; */
+
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .nous-trouver-stores-container>div:first-child {
+        width: 48%;
+    }
+
+    .nous-trouver-store-list>ul>li {
+        display: flex;
+        padding-right: 20px;
+        justify-content: space-between;
+    }
+
+    .nous-trouver-store-list>ul>li>div:first-child {
+        width: 150px;
+        height: 75px;
+        margin: auto;
+    }
+
+    .nous-trouver-store-list>ul>li>div>img {
+        margin: 0;
+    }
+
+    .nous-trouver-store-list>ul>li>div:last-child {
+        width: 75%;
+        margin: auto;
+    }
+
+    .nous-trouver-store-list>ul>li>div>h3 {
+        margin-top: 8px;
+        text-align: left;
+
+    }
+
+    .nous-trouver-store-list>ul>li>div>p {
+        text-align: left;
+
+    }
+
+    .nous-trouver-store-list>ul>li>div>div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nous-trouver-store-list>ul>li>div>div>span {
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .nous-trouver-store-list>ul>li>div>div>span>a {
+        /* text-align: left; */
+
+    }
+
+    .nous-trouver-stores-container {
+        display: flex;
+    }
+
+    .nous-trouver-stores-map-container {
+        display: block;
+        width: 50%;
+        height: calc(100vh - 77px) !important;
+    }
+
+    .nous-trouver-stores-map-container>div:first-child {
+        width: 100% !important;
+        height: calc(100vh - 77px) !important;
+    }
+}

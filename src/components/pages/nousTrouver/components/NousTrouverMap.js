@@ -1,12 +1,12 @@
 import React from "react";
 import ReactMapGL from "react-map-gl";
-import "./Map.css";
+import "./NousTrouverMap.css";
 
-class Map extends React.Component {
+class NousTrouverMap extends React.Component {
   state = {
     viewport: {
-      width: window.innerWidth,
-      height: 400,
+      width: "100%",
+      height: "calc(100vh - 77px) !important;",
       latitude: 47.393791,
       longitude: 0.684449,
       zoom: 4
@@ -17,7 +17,7 @@ class Map extends React.Component {
     require("dotenv").config();
     return (
       <ReactMapGL
-        className="discover-map"
+        className="nous-trouver-map"
         {...this.state.viewport}
         onViewportChange={viewport =>
           this.setState({
@@ -30,4 +30,4 @@ class Map extends React.Component {
   }
 }
 
-export default Map;
+export default NousTrouverMap;

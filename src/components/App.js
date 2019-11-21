@@ -4,7 +4,7 @@ import { Router, Route } from "react-router-dom";
 import Header from "./header/Header";
 import Home from "./pages/home/Home";
 import NosProduits from "./pages/nosProduits/NosProduits";
-import NousTrouver from "./pages/nosTrouver/NousTrouver";
+import NousTrouver from "./pages/nousTrouver/NousTrouver";
 import Footer from "./footer/Footer";
 import history from "../history";
 
