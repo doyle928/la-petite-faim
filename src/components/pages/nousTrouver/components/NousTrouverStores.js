@@ -29,20 +29,32 @@ function NousTrouverStores() {
     {
       id: 0,
       target: "Trouver par ville ou département",
-      text: "Trouver par ville ou département"
+      display: "Trouver par ville ou département",
+      department: null,
+      city: null
     },
-    { id: 1, target: "33", text: "33" },
-    { id: 2, target: " - Bordeaux (Libourne)", text: "Bordeaux (Libourne)" },
-    { id: 3, target: "37", text: "37" },
+    { id: 1, target: "33", display: "33", department: 33, city: null },
+    {
+      id: 2,
+      target: " - Bordeaux (Libourne)",
+      display: "Bordeaux (Libourne)",
+      department: 33,
+      city: "Bordeaux (Libourne)"
+    },
+    { id: 3, target: "37", display: "37", department: 37, city: null },
     {
       id: 4,
       target: " - Tours (Joué-Lès-Tours)",
-      text: "Tours (Joué-Lès-Tours)"
+      display: "Tours (Joué-Lès-Tours)",
+      department: 37,
+      city: "Tours (Joué-Lès-Tours)"
     },
     {
       id: 5,
       target: " - Tours (Saint-Cyr-sur Loire)",
-      text: "Tours (Saint-Cyr-sur Loire)"
+      display: "Tours (Saint-Cyr-sur Loire)",
+      department: 37,
+      city: "Tours (Saint-Cyr-sur Loire)"
     }
   ];
   const stores = [
@@ -52,7 +64,8 @@ function NousTrouverStores() {
       address: "95 avenue du Général de Gaulle, 33500 Libourne",
       email: "lulubelle@tuta.io",
       phone: "05 57 24 43 70",
-      map_url: "/"
+      map_url: "/",
+      department: 33
     },
     {
       id: 1,
@@ -60,7 +73,8 @@ function NousTrouverStores() {
       address: "155 Boulevard Jean-Jaurès, 37300 Joué-Lès-Tourse",
       email: "lulubelle@tuta.io",
       phone: "02 47 87 27 57",
-      map_url: "/"
+      map_url: "/",
+      department: 37
     },
     {
       id: 2,
@@ -68,37 +82,32 @@ function NousTrouverStores() {
       address: "9 rue de la Ménardière, 37540 Saint-Cyr-sur-Loire",
       email: "lulubelle@tuta.io",
       phone: "09 67 32 43 35",
-      map_url: "/"
+      map_url: "/",
+      department: 37
     }
   ];
 
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState({
+    id: 0,
+    department: null,
+    city: null
+  });
   const [showMenu, SetShowMenu] = useState(null);
-
+  const [value, setValue] = useState("");
   if (showMenu === null) {
     SetShowMenu(false);
   }
-  console.log("active", active);
 
   const NavLink = ({ id, target, isActive, onClick }) => (
     <li
       onClick={useCallback(() => onClick(id), [id])}
-      className={`nous-trouver-select-option ${isActive ? "active" : ""}`}
+      className={`nous-trouver-select-option`}
     >
       {target}
     </li>
   );
 
-  // const [slide, setSlide] = useState(0);
-  // useEffect(() => {
-  //   if (slide === true) {
-  //     setSlide(!slide);
-  //   }
-  // }, [slide]);
-  // const slide_class = slide ? "" : "slide";
-  console.log(showMenu);
-
-  let displayActive = active ? items[active].text : items[0].text;
+  let displayActive = active ? items[active.id].display : items[0].display;
   let displayList = showMenu ? "nous-trouver-store-show" : "";
   let displayIconExpand = showMenu
     ? "nous-trouver-unexpand"
@@ -124,52 +133,76 @@ function NousTrouverStores() {
             />
           </div>
           <div className={`nous-trouver-store-option-container ${displayList}`}>
-            <input />
+            <input
+              value={value}
+              onChange={e => setValue(e.target.value)}
+              type="text"
+            />
             <ul>
-              {items.map(item => (
-                <NavLink
-                  {...item}
-                  onClick={() => {
-                    setActive(item.id);
-                    SetShowMenu(false);
-                  }}
-                  isActive={active === item.id}
-                  key={item.id}
-                />
-              ))}
+              {items.map(
+                (item, i) =>
+                  (value === "" ||
+                    (item.department === null && item.city === null) ||
+                    (item.department.toString().indexOf(value) >= 0 &&
+                      item.city === null) ||
+                    (item.city !== null &&
+                      item.city.toLowerCase().indexOf(value) >= 0)) && (
+                    <NavLink
+                      {...item}
+                      key={i}
+                      onClick={() => {
+                        setActive({
+                          id: item.id,
+                          department: item.department,
+                          city: item.city
+                        });
+                        SetShowMenu(false);
+                        setValue("");
+                      }}
+                      isActive={active === item.id}
+                      key={item.id}
+                    />
+                  )
+              )}
             </ul>
           </div>
         </div>
         <div className="nous-trouver-store-list">
           <ul>
-            {stores.map(store => (
-              <li {...store}>
-                <div>
-                  <img src={logo} />
-                </div>
-                <div>
-                  <h3>{store.city}</h3>
-                  <p>{store.address}</p>
-                  <div>
-                    <span>
-                      <EmailRoundedIcon style={styles.storeInfoIcon} />
-                      &nbsp;
-                      <a href={store.map_url}>{store.email}</a>
-                    </span>
-                    <span>
-                      <CallRoundedIcon style={styles.storeInfoIcon} />
-                      &nbsp;
-                      <a href={store.map_url}>{store.phone}</a>
-                    </span>
-                    <span>
-                      <NearMeRoundedIcon style={styles.storeInfoIcon} />
-                      &nbsp;
-                      <a href={store.map_url}>Y ALLER</a>
-                    </span>
-                  </div>
-                </div>
-              </li>
-            ))}
+            {stores.map(
+              (store, i) =>
+                (active.id === 0 ||
+                  (active.department == store.department &&
+                    active.city === null) ||
+                  active.city === store.city) && (
+                  <li {...store} key={i}>
+                    <div>
+                      <img src={logo} />
+                    </div>
+                    <div>
+                      <h3>{store.city}</h3>
+                      <p>{store.address}</p>
+                      <div>
+                        <span>
+                          <EmailRoundedIcon style={styles.storeInfoIcon} />
+                          &nbsp;
+                          <a href={store.map_url}>{store.email}</a>
+                        </span>
+                        <span>
+                          <CallRoundedIcon style={styles.storeInfoIcon} />
+                          &nbsp;
+                          <a href={store.map_url}>{store.phone}</a>
+                        </span>
+                        <span>
+                          <NearMeRoundedIcon style={styles.storeInfoIcon} />
+                          &nbsp;
+                          <a href={store.map_url}>Y ALLER</a>
+                        </span>
+                      </div>
+                    </div>
+                  </li>
+                )
+            )}
           </ul>
         </div>
       </div>

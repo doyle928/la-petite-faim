@@ -6,10 +6,10 @@ class NousTrouverMap extends React.Component {
   state = {
     viewport: {
       width: "100%",
-      height: "calc(100vh - 77px) !important;",
+      height: "calc(100vh - 77px) !important",
       latitude: 47.393791,
       longitude: 0.684449,
-      zoom: 4
+      zoom: 5
     }
   };
 

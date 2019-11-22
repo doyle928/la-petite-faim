@@ -14,7 +14,6 @@
 }
 
 .nos-produits-nutrition-header {
-
     margin: 110px auto 80px;
     width: 80%;
 }
@@ -80,4 +79,16 @@
     line-height: 1em;
     padding-bottom: 1em;
     font-weight: 400;
+}
+
+@media only screen and (min-width: 980px) {
+    .nos-produits-nutrition-header {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .nos-produits-nutrition-container>div:last-child {
+        width: 70%;
+        margin: 0 auto;
+    }
 }
