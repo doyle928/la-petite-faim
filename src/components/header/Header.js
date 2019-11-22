@@ -91,7 +91,7 @@ const Header = props => {
             </Link>
           </li>
           <li>
-            <Link to="/" onClick={() => setMenu(false)}>
+            <Link to="/recrutement" onClick={() => setMenu(false)}>
               RECRUTEMENT
             </Link>
           </li>
@@ -136,7 +136,7 @@ const Header = props => {
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName="active" exact to="/">
+              <NavLink activeClassName="active" exact to="/recrutement">
                 RECRUTEMENT
               </NavLink>
             </li>

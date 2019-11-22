@@ -1,0 +1,68 @@
+.recrutement-header-container {
+    position: relative;
+    width: 100vw;
+    background-color: #214263;
+}
+
+.recrutement-header-container>div:first-child {
+    background-image: url("../../../../styles/images/recrutement/header/recrutement-header.png");
+    background-position: center;
+    /* background-position-y: 75%; */
+    background-size: cover;
+    width: 100vw;
+    height: 185px;
+    margin-top: 79px;
+    /* opacity: 0; */
+    transition: 1.5s ease-out;
+
+}
+
+.recrutement-header-loaded {
+    opacity: 1 !important;
+    background-position-y: 56% !important;
+}
+
+.recrutement-header-unloaded {
+    background-position-y: 75% !important;
+    opacity: 0 !important;
+    transition: 0s !important;
+}
+
+.recrutement-header-container>div>div {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+
+}
+
+.recrutement-header-container>div>div>h3 {
+    font-size: 43px;
+    color: #fff;
+    font-family: 'Playfair Display',
+        serif;
+    line-height: 1.3em;
+    padding: 10px 0;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.45);
+}
+
+.recrutement-header-svg {
+    background-image: url("../../../../styles/images/header-border.svg");
+    position: absolute;
+    bottom: 0;
+    background-size: 100% 100px;
+    bottom: 0;
+    height: 100px;
+    z-index: 10;
+    width: 100vw;
+}
+
+@media only screen and (min-width: 800px) {
+    .recrutement-header-container>div:first-child {
+        margin-top: 199px;
+        height: 275px;
+    }
+
+    .recrutement-header-container>div>div>h3 {
+        padding: 64px 0;
+    }
+}

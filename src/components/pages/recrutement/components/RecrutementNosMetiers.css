@@ -1,0 +1,45 @@
+.recrutement-nos-metiers-container {
+    width: 100%;
+    /* background-color: #fff; */
+    padding: 90px 0;
+}
+
+.recrutement-nos-metiers-container>div {
+    width: 80%;
+    width: 80%;
+    margin: auto;
+}
+
+.recrutement-nos-metiers-container>div>h2 {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 18px;
+    padding: 25px 0 15px;
+    font-family: 'Montserrat',
+        sans-serif;
+    letter-spacing: 2px;
+    font-weight: 700;
+
+}
+
+.recrutement-nos-metiers-container>div>div {
+    width: 60px;
+    height: 3px;
+    background-color: #b19f6f;
+    margin: 0 auto 83px;
+}
+
+.recrutement-nos-metiers-container>div>p {
+    color: #212529;
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Poppins',
+        sans-serif;
+    line-height: 1.5em;
+    /* padding: 1em 0; */
+    font-weight: 400;
+}
+
+.recrutement-nos-metiers-container>div>p>a {
+    color: #b19f6f;
+}

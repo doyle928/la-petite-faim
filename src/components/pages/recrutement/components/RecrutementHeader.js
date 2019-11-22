@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./NousTrouverHeader.css";
+import "./RecrutementHeader.css";
 
-function NousTrouverHeader() {
+function RecrutementHeader() {
   const [loaded, setLoaded] = useState(0);
 
   useEffect(() => {
@@ -12,19 +12,19 @@ function NousTrouverHeader() {
   }, [loaded]);
 
   const loaded_class = loaded
-    ? "nos-trouver-header-loaded"
-    : "nos-trouver-header-unloaded";
+    ? "recrutement-header-loaded"
+    : "recrutement-header-unloaded";
 
   return (
-    <div className="nous-trouver-header-container">
+    <div className="recrutement-header-container">
       <div className={loaded_class}>
         <div>
-          <h3>Trouvez votre Boulangerie La Petite Faim</h3>
+          <h3>Espace Carrières</h3>
         </div>
       </div>
-      <div className="nous-trouver-header-svg" />
+      <div className="recrutement-header-svg" />
     </div>
   );
 }
 
-export default NousTrouverHeader;
+export default RecrutementHeader;

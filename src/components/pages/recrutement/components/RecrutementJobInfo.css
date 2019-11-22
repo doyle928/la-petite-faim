@@ -1,0 +1,33 @@
+.recrutement-job-info-container {
+    height: 800px;
+    width: 100%;
+    position: relative;
+}
+
+.recrutement-job-info-top-border {
+    background-image: url("../../../../styles/images/recrutement/corner-border.svg");
+    position: absolute;
+    top: 0;
+    background-size: 100% 100px;
+    height: 100px;
+    z-index: 10;
+    width: 100vw;
+    transform: rotate(180deg) scaleX(-1);
+}
+
+.recrutement-job-info-body {
+    background-color: #1f1f1f;
+    width: 100%;
+    height: 100%;
+}
+
+.recrutement-job-info-bottom-border {
+    background-image: url("../../../../styles/images/recrutement/corner-border.svg");
+    position: absolute;
+    background-size: 100% 100px;
+    bottom: 0;
+    height: 100px;
+    z-index: 10;
+    width: 100vw;
+    transform: scaleX(-1);
+}
