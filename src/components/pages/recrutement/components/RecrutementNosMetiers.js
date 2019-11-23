@@ -9,7 +9,7 @@ function RecrutementNosMetiers() {
         <div></div>
         <p>
           De la formation en apprentissage à un poste à responsabilité, de
-          multiples opportunités sont possibles au sein des équipes La Petite
+          multiples opportunités sont possibles au sein de équipe La Petite
           Faim.
         </p>
         <p>

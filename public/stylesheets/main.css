@@ -20,4 +20,5 @@ html::-webkit-scrollbar-thumb:hover {
 
 * {
     -webkit-font-smoothing: antialiased;
+    image-rendering: optimizeSpeed;
 }
