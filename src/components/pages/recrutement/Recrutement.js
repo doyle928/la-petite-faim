@@ -4,6 +4,7 @@ import RecrutementHeader from "./components/RecrutementHeader";
 import RecrutementNosMetiers from "./components/RecrutementNosMetiers";
 import RecrutementJobInfo from "./components/RecrutementJobInfo";
 import RecrutementJobList from "./components/RecrutementJobList";
+import RecrutementJobList2 from "./components/RecrutementJobList2";
 
 function Recrutement() {
   return (
@@ -12,6 +13,7 @@ function Recrutement() {
       <RecrutementNosMetiers />
       <RecrutementJobInfo />
       <RecrutementJobList />
+      {/* <RecrutementJobList2 /> */}
     </div>
   );
 }
