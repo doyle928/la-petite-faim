@@ -1,36 +1,45 @@
 import React, { useCallback, useState, useEffect } from "react";
 import "./RecrutementJobList.css";
 import _ from "lodash";
-import ExpandLessIcon from "@material-ui/icons/ExpandLess";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import LocationOnRoundedIcon from "@material-ui/icons/LocationOnRounded";
 import SchoolRoundedIcon from "@material-ui/icons/SchoolRounded";
 import DateRangeRoundedIcon from "@material-ui/icons/DateRangeRounded";
 import DescriptionRoundedIcon from "@material-ui/icons/DescriptionRounded";
 import AccessTimeRoundedIcon from "@material-ui/icons/AccessTimeRounded";
-import logo from "../../../../styles/images/header/logo.png";
-// import useAutocomplete from "@material-ui/lab/useAutocomplete";
-import CheckIcon from "@material-ui/icons/Check";
-import CloseIcon from "@material-ui/icons/Close";
-import styled from "styled-components";
-
-import InputOne from "./test/InputOne";
-import InputTwo from "./test/InputTwo";
+import WorkOutlineRoundedIcon from "@material-ui/icons/WorkOutlineRounded";
+import VisibilityRoundedIcon from "@material-ui/icons/VisibilityRounded";
+import InputOne from "./inputs/InputOne";
+import InputTwo from "./inputs/InputTwo";
 
 function RecrutementJobList() {
   const styles = {
     icon: {
-      fill: "#444",
+      fill: "#fff",
       stroke: "none",
       height: 25,
       width: 25,
-      margin: "11px"
+      margin: "auto",
+      position: "absolute",
+      left: "50%",
+      top: "50%",
+      transform: "translateX(-50%) translatey(-50%)"
     },
     storeInfoIcon: {
       fill: "#b4a06e",
       stroke: "none",
       height: 23,
       width: 23
+    },
+    seeMore: {
+      position: "absolute",
+      left: "50%",
+      top: "50%",
+      transform: "translateX(-50%) translatey(-50%)",
+      height: 70,
+      width: 70,
+      fill: "#fff",
+      stroke: "none",
+      opacity: 0.6
     }
   };
 
@@ -104,8 +113,24 @@ function RecrutementJobList() {
   return (
     <div className="recrutement-job-list-container">
       <div className="recrutement-job-list-header">
-        <InputOne setValues={setValues} values={values} jobList={jobList} />
-        <InputTwo setValues={setValues} values={values} jobList={jobList} />
+        <div>
+          <h2>NOS OFFRES D’EMPLOI</h2>
+          <div></div>
+        </div>
+        <div className="recrutement-job-list-header-input-container">
+          <div className="recrutement-job-list-header-input-one">
+            <span>
+              <WorkOutlineRoundedIcon style={styles.icon} />
+            </span>
+            <InputOne setValues={setValues} values={values} jobList={jobList} />
+          </div>
+          <div className="recrutement-job-list-header-input-two">
+            <span>
+              <LocationOnRoundedIcon style={styles.icon} />
+            </span>
+            <InputTwo setValues={setValues} values={values} jobList={jobList} />
+          </div>
+        </div>
       </div>
       <div className="recrutement-job-list-jobs-container">
         <ul>
@@ -130,34 +155,43 @@ function RecrutementJobList() {
                     <h3>{job.job}</h3>
                     <p>Publiè il y a {job.day_posted} jours</p>
                     <div>
-                      <span>
-                        <LocationOnRoundedIcon style={styles.storeInfoIcon} />
-                        &nbsp;
-                        <p>{job.department}</p>
-                      </span>
-                      {job.education !== null && (
+                      <div>
                         <span>
-                          <SchoolRoundedIcon style={styles.storeInfoIcon} />
+                          <LocationOnRoundedIcon style={styles.storeInfoIcon} />
                           &nbsp;
-                          <p>{job.education}</p>
+                          <p>{job.department}</p>
                         </span>
-                      )}
-                      <span>
-                        <DateRangeRoundedIcon style={styles.storeInfoIcon} />
-                        &nbsp;
-                        <p>{job.experience}</p>
-                      </span>
-                      <span>
-                        <DescriptionRoundedIcon style={styles.storeInfoIcon} />
-                        &nbsp;
-                        <p>{job.work}</p>
-                      </span>
-                      <span>
-                        <AccessTimeRoundedIcon style={styles.storeInfoIcon} />
-                        &nbsp;
-                        <p>{job.hours}H</p>
-                      </span>
+                        {job.education !== null && (
+                          <span>
+                            <SchoolRoundedIcon style={styles.storeInfoIcon} />
+                            &nbsp;
+                            <p>{job.education}</p>
+                          </span>
+                        )}
+                        <span>
+                          <DateRangeRoundedIcon style={styles.storeInfoIcon} />
+                          &nbsp;
+                          <p>{job.experience}</p>
+                        </span>
+                      </div>
+                      <div>
+                        <span>
+                          <DescriptionRoundedIcon
+                            style={styles.storeInfoIcon}
+                          />
+                          &nbsp;
+                          <p>{job.work}</p>
+                        </span>
+                        <span>
+                          <AccessTimeRoundedIcon style={styles.storeInfoIcon} />
+                          &nbsp;
+                          <p>{job.hours}H</p>
+                        </span>
+                      </div>
                     </div>
+                  </div>
+                  <div className="recrutement-job-item-hover">
+                    <VisibilityRoundedIcon style={styles.seeMore} />
                   </div>
                 </li>
               )

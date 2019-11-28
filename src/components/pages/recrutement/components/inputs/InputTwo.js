@@ -59,7 +59,7 @@ const InputTwo = params => {
   }, [value]);
 
   return (
-    <div>
+    <div className="recrutement-input-two">
       <div {...getRootProps()}>
         <InputWrapper ref={setAnchorEl} className={focused ? "focused" : ""}>
           {value.map((option, index) => (

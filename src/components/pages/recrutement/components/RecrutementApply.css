@@ -1,0 +1,165 @@
+.recrutement-apply-container {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+.recrutement-apply-top-border {
+    background-image: url("../../../../styles/images/recrutement/rounded-edge.svg");
+    position: absolute;
+    top: 0;
+    background-size: 100% 100px;
+    height: 100px;
+    z-index: 10;
+    width: 100vw;
+    transform: rotate(180deg) scaleX(-1);
+}
+
+.recrutement-apply-header {
+    padding-top: 100px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.recrutement-apply-header>h2 {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 18px;
+    padding: 25px 0 15px;
+    font-family: 'Montserrat',
+        sans-serif;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.recrutement-apply-header>div {
+    width: 60px;
+    height: 3px;
+    background-color: #b19f6f;
+    margin: 0 auto 83px;
+}
+
+.recrutement-apply-form-container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.recrutement-apply-form-container>form>div {
+    width: 100%;
+}
+
+.recrutement-apply-form-container>form>div>span {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin: 15px 0;
+}
+
+.recrutement-apply-form-section {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin: 15px 0;
+
+}
+
+.recrutement-apply-form-contact>span:first-child {
+    margin: 0;
+}
+
+.recrutement-apply-section-email {
+    margin: 15px 0 0 !important;
+}
+
+.recrutement-apply-form-boulangerie {
+    margin: 0;
+}
+
+.recrutement-apply-form-input {
+    width: 100%;
+}
+
+.recrutement-apply-form-message>svg {
+    align-self: baseline;
+    margin-top: 10px;
+
+}
+
+.recrutement-active-icon {
+    fill: #b19f6f !important;
+}
+
+.recrutement-apply-form-cv {
+    height: 3rem;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.recrutement-apply-form-cv>input {
+    height: 3rem;
+    cursor: pointer !important;
+    z-index: 1;
+
+}
+
+.recrutement-apply-form-cv>input:focus {
+    outline: #b19f6f auto 1px !important;
+    outline-color: #b19f6f !important;
+    outline-style: auto;
+    outline-width: 1px;
+}
+
+.recrutement-apply-form-cv>.custom-file-label {
+    border: none;
+    border-bottom: 1px solid #444;
+    height: 3rem;
+    cursor: pointer;
+    z-index: 4;
+
+}
+
+.recrutement-apply-form-cv>span {
+    position: absolute;
+    top: 0;
+    left: 0 !important;
+    background-color: #b19f6f;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    padding: 0 1.25rem;
+
+    height: 3rem;
+    z-index: 2;
+    cursor: pointer;
+
+}
+
+.recrutement-apply-form-cv>span>p {
+    color: #fff;
+    font-family: 'Poppins',
+        sans- serif;
+    letter-spacing: .5px;
+    margin: auto;
+    padding: 42% 0;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.recrutement-apply-form-cv>span>div {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    background-color: #fff;
+    width: 12px;
+    height: 3rem;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.recrutement-apply-form-cv>.custom-file-label::after {
+    /* display: none; */
+}
