@@ -19,7 +19,6 @@
     padding-top: 100px;
     width: 80%;
     margin: 0 auto;
-
 }
 
 .recrutement-apply-header>h2 {
@@ -27,8 +26,7 @@
     color: #aaaaaa;
     font-size: 18px;
     padding: 25px 0 15px;
-    font-family: 'Montserrat',
-        sans-serif;
+    font-family: "Montserrat", sans-serif;
     letter-spacing: 2px;
     font-weight: 700;
 }
@@ -55,6 +53,7 @@
     display: flex;
     align-items: flex-end;
     margin: 15px 0;
+    position: relative;
 }
 
 .recrutement-apply-form-section {
@@ -62,7 +61,6 @@
     display: flex;
     align-items: flex-end;
     margin: 15px 0;
-
 }
 
 .recrutement-apply-form-contact>span:first-child {
@@ -84,7 +82,6 @@
 .recrutement-apply-form-message>svg {
     align-self: baseline;
     margin-top: 10px;
-
 }
 
 .recrutement-active-icon {
@@ -101,7 +98,6 @@
     height: 3rem;
     cursor: pointer !important;
     z-index: 1;
-
 }
 
 .recrutement-apply-form-cv>input:focus {
@@ -117,7 +113,6 @@
     height: 3rem;
     cursor: pointer;
     z-index: 4;
-
 }
 
 .recrutement-apply-form-cv>span {
@@ -125,8 +120,7 @@
     top: 0;
     left: 0 !important;
     background-color: #b19f6f;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-        0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
         0 3px 1px -2px rgba(0, 0, 0, 0.2);
     border-radius: 2px;
     padding: 0 1.25rem;
@@ -134,19 +128,16 @@
     height: 3rem;
     z-index: 2;
     cursor: pointer;
-
 }
 
 .recrutement-apply-form-cv>span>p {
     color: #fff;
-    font-family: 'Poppins',
-        sans- serif;
-    letter-spacing: .5px;
+    font-family: "Poppins", sans- serif;
+    letter-spacing: 0.5px;
     margin: auto;
     padding: 42% 0;
     font-size: 16px;
     cursor: pointer;
-
 }
 
 .recrutement-apply-form-cv>span>div {
@@ -162,4 +153,163 @@
 
 .recrutement-apply-form-cv>.custom-file-label::after {
     /* display: none; */
+}
+
+.custom-file-one,
+.custom-file-two {
+    height: 48px;
+    position: relative;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.custom-file-one>button,
+.custom-file-two>button {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-file-one>div,
+.custom-file-two>div {
+    display: flex;
+    cursor: pointer !important;
+}
+
+.custom-file-one>div>span {
+    width: 66px !important;
+    height: 48px;
+    background-color: #b19f6f;
+    color: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    margin: 0 !important;
+    padding: 0;
+    position: relative;
+}
+
+.custom-file-two>div>span {
+    width: 264px !important;
+    height: 48px;
+    background-color: #b19f6f;
+    color: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    margin: 0 !important;
+    padding: 0;
+    position: relative;
+}
+
+.custom-file-one>div>span>p,
+.custom-file-two>div>span>p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-family: "Roboto", sans-serif !important;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.custom-file-one>div>p,
+.custom-file-two>div>p {
+    flex-grow: 1;
+    margin: 0;
+    margin-left: 15px;
+    border-bottom: 1px solid #444;
+    color: #444;
+    padding: 19px 4px 7px;
+    font-size: 14px;
+    font-family: "Poppins", sans- serif;
+    font-weight: 400;
+    text-align: left;
+}
+
+.recrutement-apply-form-fake-captcha {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.recrutement-apply-form-fake-captcha>img {
+    width: 304px;
+}
+
+.recrutement-apply-form-submit {
+    margin: 30px 0 75px;
+    text-align: left;
+}
+
+.recrutement-form-submit {
+    width: 124px;
+    height: 36px;
+    background-color: #b19f6f;
+    color: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    padding: 0;
+    border: none;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-family: "Roboto", sans-serif !important;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.react-datepicker-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.react-datepicker-wrapper input {
+    height: 48px;
+    position: absolute;
+    top: -15px;
+    left: 43px;
+    border: none;
+    background-color: transparent;
+    font-family: "Poppins", sans- serif;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.react-datepicker-wrapper input:focus {
+    outline-color: transparent;
+}
+
+.recrutement-apply-form-boulangerie>.MuiFormControl-root {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .recrutement-apply-form-name,
+    .recrutement-apply-form-contact,
+    .recrutement-apply-form-job-date {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .recrutement-apply-form-section-flex {
+        width: 48% !important;
+    }
 }

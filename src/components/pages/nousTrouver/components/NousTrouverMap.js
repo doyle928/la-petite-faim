@@ -1,5 +1,5 @@
 import React from "react";
-import ReactMapGL from "react-map-gl";
+import ReactMapGL, { NavigationControl } from "react-map-gl";
 import "./NousTrouverMap.css";
 
 class NousTrouverMap extends React.Component {
@@ -24,8 +24,13 @@ class NousTrouverMap extends React.Component {
             viewport
           })
         }
+        scrollZoom={false}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-      />
+      >
+        <div style={{ position: "absolute", right: "10px", top: "7px" }}>
+          <NavigationControl />
+        </div>
+      </ReactMapGL>
     );
   }
 }

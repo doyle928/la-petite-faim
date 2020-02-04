@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from "react";
 import "./RecrutementApply.css";
 import TextField from "@material-ui/core/TextField";
 import AccountCircleRoundedIcon from "@material-ui/icons/AccountCircleRounded";
@@ -12,14 +11,16 @@ import StoreRoundedIcon from "@material-ui/icons/StoreRounded";
 import LabelImportantRoundedIcon from "@material-ui/icons/LabelImportantRounded";
 import InsertCommentRoundedIcon from "@material-ui/icons/InsertCommentRounded";
 import {
-  fade,
-  ThemeProvider,
   withStyles,
   makeStyles,
   createMuiTheme
 } from "@material-ui/core/styles";
 import { brown } from "@material-ui/core/colors";
-import bsCustomFileInput from "bs-custom-file-input";
+import FormControl from "@material-ui/core/FormControl";
+import Files from "react-butterfiles";
+import fakeCaptch from "../../../../styles/images/fake_captcha.png";
+import InputDatePicker from "./inputs/InputDatePicker";
+import SelectBoulangerie from "./inputs/SelectBoulangerie";
 
 function RecrutementApply() {
   const styles = {
@@ -80,6 +81,12 @@ function RecrutementApply() {
     }
   })(TextField);
 
+  const theme = createMuiTheme({
+    palette: {
+      primary: brown
+    }
+  });
+
   const useStyles = makeStyles(theme => ({
     root: {
       display: "flex",
@@ -90,57 +97,36 @@ function RecrutementApply() {
     }
   }));
 
-  const theme = createMuiTheme({
-    palette: {
-      primary: brown
-    }
-  });
-
   const classes = useStyles();
 
-  const [index, setIndex] = useState(null);
-  const idList = [
-    "recrutement-apply-prenom",
-    "recrutement-apply-nom",
-    "recrutement-apply-telephone",
-    "recrutement-apply-email",
-    "recrutement-apply-poste",
-    "recrutement-apply-date",
-    "recrutement-apply-boulangerie",
-    "recrutement-apply-subjet",
-    "recrutement-apply-message"
-  ];
-  let el = null;
+  // const [index, setIndex] = useState(null);
+  const [getFile, setFile] = useState(null);
 
-  document.addEventListener(
-    "focusin",
-    () => {
-      if ("id" in document.activeElement) {
-        if (
-          document.activeElement.id === "recrutement-apply-prenom" ||
-          document.activeElement.id === "recrutement-apply-nom" ||
-          document.activeElement.id === "recrutement-apply-telephone" ||
-          document.activeElement.id === "recrutement-apply-email" ||
-          document.activeElement.id === "recrutement-apply-poste" ||
-          document.activeElement.id === "recrutement-apply-date" ||
-          document.activeElement.id === "recrutement-apply-boulangerie" ||
-          document.activeElement.id === "recrutement-apply-subjet" ||
-          document.activeElement.id === "recrutement-apply-message"
-        ) {
-          changeIcon(document.activeElement.id);
-        }
-      }
-    },
-    true
-  );
+  const getDate = date => {
+    if (date && date.length > 0) {
+      return date;
+    } else {
+      return "";
+    }
+  };
 
-  const changeIcon = el => {
-    for (let i = 0; i < idList.length; i++) {
-      if (idList[i] === el) {
-        setIndex(i);
+  const getBoulangerie = date => {
+    if (date && date.length > 0) {
+      return date;
+    } else {
+      return "";
+    }
+  };
+
+  const removeClasses = () => {
+    let nodes = document.querySelectorAll(".apply-form-icons");
+    for (let node = 0; node < nodes.length; node++) {
+      if (
+        nodes[node].className.baseVal.indexOf("recrutement-active-icon") >= 0
+      ) {
+        nodes[node].classList.remove("recrutement-active-icon");
       }
     }
-    document.getElementById(el).focus();
   };
 
   return (
@@ -153,10 +139,17 @@ function RecrutementApply() {
       <div className="recrutement-apply-form-container">
         <form className={classes.root} noValidate autoComplete="off">
           <div className="recrutement-apply-form-name">
-            <span className="recrutement-apply-form-section">
+            <span
+              className="recrutement-apply-form-section recrutement-apply-form-section-flex"
+              onClick={async () => {
+                await removeClasses();
+                let node = document.querySelector(".prenom");
+                node.classList.add("recrutement-active-icon");
+              }}
+            >
               <AccountCircleRoundedIcon
                 style={styles.formIcon}
-                className={`${index === 0 ? "recrutement-active-icon" : ""}`}
+                className={`prenom apply-form-icons`}
               />
               <CssTextField
                 className={classes.margin}
@@ -165,10 +158,17 @@ function RecrutementApply() {
                 label="Prénom"
               />
             </span>
-            <span className="recrutement-apply-form-section">
+            <span
+              className="recrutement-apply-form-section recrutement-apply-form-section-flex"
+              onClick={() => {
+                removeClasses();
+                let node = document.querySelector(".nom");
+                node.classList.add("recrutement-active-icon");
+              }}
+            >
               <AccountBoxRoundedIcon
                 style={styles.formIcon}
-                className={`${index === 1 ? "recrutement-active-icon" : ""}`}
+                className={`nom apply-form-icons`}
               />
               <CssTextField
                 className={classes.margin}
@@ -179,10 +179,17 @@ function RecrutementApply() {
             </span>
           </div>
           <div className="recrutement-apply-form-contact">
-            <span className="recrutement-apply-form-section">
+            <span
+              className="recrutement-apply-form-section recrutement-apply-form-section-flex"
+              onClick={() => {
+                removeClasses();
+                let node = document.querySelector(".phone");
+                node.classList.add("recrutement-active-icon");
+              }}
+            >
               <PhoneRoundedIcon
                 style={styles.formIcon}
-                className={`${index === 2 ? "recrutement-active-icon" : ""}`}
+                className={`phone apply-form-icons`}
               />
               <CssTextField
                 className={classes.margin}
@@ -191,10 +198,17 @@ function RecrutementApply() {
                 label="Téléphone"
               />
             </span>
-            <span className="recrutement-apply-form-section recrutement-apply-section-email">
+            <span
+              className="recrutement-apply-form-section recrutement-apply-section-email recrutement-apply-form-section-flex"
+              onClick={() => {
+                removeClasses();
+                let node = document.querySelector(".email");
+                node.classList.add("recrutement-active-icon");
+              }}
+            >
               <EmailRoundedIcon
                 style={styles.formIcon}
-                className={`${index === 3 ? "recrutement-active-icon" : ""}`}
+                className={`email apply-form-icons`}
               />
               <CssTextField
                 className={classes.margin}
@@ -205,10 +219,17 @@ function RecrutementApply() {
             </span>
           </div>
           <div className="recrutement-apply-form-job-date">
-            <span className="recrutement-apply-form-section">
+            <span
+              className="recrutement-apply-form-section recrutement-apply-form-section-flex"
+              onClick={() => {
+                removeClasses();
+                let node = document.querySelector(".poste");
+                node.classList.add("recrutement-active-icon");
+              }}
+            >
               <WorkRoundedIcon
                 style={styles.formIcon}
-                className={`${index === 4 ? "recrutement-active-icon" : ""}`}
+                className={`poste apply-form-icons`}
               />
               <CssTextField
                 className={classes.margin}
@@ -217,47 +238,65 @@ function RecrutementApply() {
                 label="Poste"
               />
             </span>
-            <span className="recrutement-apply-form-section">
+            <span
+              className="recrutement-apply-form-section recrutement-apply-form-section-flex"
+              onClick={() => {
+                removeClasses();
+                let node = document.querySelector(".date");
+                node.classList.add("recrutement-active-icon");
+              }}
+            >
               <DateRangeRoundedIcon
                 style={styles.formIcon}
-                className={`${index === 5 ? "recrutement-active-icon" : ""}`}
+                className={`date apply-form-icons`}
               />
-              <CssTextField
-                className={classes.margin}
-                id="recrutement-apply-date"
-                className="recrutement-apply-form-input"
-                label="Date de disponibilité"
-              />
+              <InputDatePicker getDate={getDate} />
             </span>
           </div>
-          <div className="recrutement-apply-form-section recrutement-apply-form-boulangerie">
+          <div
+            className="recrutement-apply-form-section recrutement-apply-form-boulangerie"
+            onClick={() => {
+              removeClasses();
+              let node = document.querySelector(".boulangerie");
+              node.classList.add("recrutement-active-icon");
+            }}
+          >
             <StoreRoundedIcon
               style={styles.formIcon}
-              className={`${index === 6 ? "recrutement-active-icon" : ""}`}
+              className={`boulangerie apply-form-icons`}
             />
-            <CssTextField
-              className={classes.margin}
-              id="recrutement-apply-boulangerie"
-              className="recrutement-apply-form-input"
-              label="Sélectionnez une boulangerie"
-            />
+            <SelectBoulangerie getBoulangerie={getBoulangerie} />
           </div>
-          <div className="recrutement-apply-form-section recrutement-apply-form-subjet">
+          <div
+            className="recrutement-apply-form-section recrutement-apply-form-subjet"
+            onClick={() => {
+              removeClasses();
+              let node = document.querySelector(".subjet");
+              node.classList.add("recrutement-active-icon");
+            }}
+          >
             <LabelImportantRoundedIcon
               style={styles.formIcon}
-              className={`${index === 7 ? "recrutement-active-icon" : ""}`}
+              className={`subjet apply-form-icons`}
             />
             <CssTextField
               className={classes.margin}
               id="recrutement-apply-subjet"
               className="recrutement-apply-form-input"
-              label="Sujet"
+              label="Subjet"
             />
           </div>
-          <div className="recrutement-apply-form-section recrutement-apply-form-message">
+          <div
+            className="recrutement-apply-form-section recrutement-apply-form-message"
+            onClick={() => {
+              removeClasses();
+              let node = document.querySelector(".message");
+              node.classList.add("recrutement-active-icon");
+            }}
+          >
             <InsertCommentRoundedIcon
               style={styles.formIcon}
-              className={`${index === 8 ? "recrutement-active-icon" : ""}`}
+              className={`message apply-form-icons`}
             />
             <CssTextField
               className={classes.margin}
@@ -268,12 +307,81 @@ function RecrutementApply() {
               rows="4"
             />
           </div>
-          <div className="custom-file">
-            <bsCustomFileInput />
-            {/* <span>
-                          <p>CV*</p>
-                      </span>
-                      <div></div> */}
+          <div className="custom-file-one">
+            <Files
+              multiple={false}
+              maxSize="10mb"
+              accept={["application/pdf", "image/jpg", "image/jpeg"]}
+              onSuccess={file1 => setFile({ ...getFile, file1: file1 })}
+              onError={error1 => setFile({ ...getFile, error1: error1 })}
+            >
+              {({ browseFiles }) => (
+                <>
+                  <button
+                    onClick={e => {
+                      e.preventDefault();
+                      browseFiles();
+                    }}
+                  ></button>
+                  <div>
+                    <span>
+                      <p>CV *</p>
+                    </span>
+                    {getFile !== null && "file1" in getFile && (
+                      <p key={getFile.file1[0].name}>{getFile.file1[0].name}</p>
+                    )}
+                    {getFile !== null && getFile.error1 && (
+                      <p key={getFile.error1.file.name}>
+                        {getFile.error1.file.name} - {getFile.error1.type}
+                      </p>
+                    )}
+                    {getFile === null && <p></p>}
+                  </div>
+                </>
+              )}
+            </Files>
+          </div>
+          <div className="custom-file-two">
+            <Files
+              multiple={false}
+              maxSize="10mb"
+              accept={["application/pdf", "image/jpg", "image/jpeg"]}
+              onSuccess={file2 => setFile({ ...getFile, file2: file2 })}
+              onError={error2 => setFile({ ...getFile, error2: error2 })}
+            >
+              {({ browseFiles }) => (
+                <>
+                  <button
+                    onClick={e => {
+                      e.preventDefault();
+                      browseFiles();
+                    }}
+                  ></button>
+                  <div>
+                    <span>
+                      <p>LETTRE DE MOTIVATION</p>
+                    </span>
+                    {getFile !== null && "file2" in getFile && (
+                      <p key={getFile.file2[0].name}>{getFile.file2[0].name}</p>
+                    )}
+                    {getFile !== null && getFile.error2 && (
+                      <p key={getFile.error2.file.name}>
+                        {getFile.error2.file.name} - {getFile.error2.type}
+                      </p>
+                    )}
+                    {getFile === null && <p></p>}
+                  </div>
+                </>
+              )}
+            </Files>
+          </div>
+          <div className="recrutement-apply-form-fake-captcha">
+            <img src={fakeCaptch} />
+          </div>
+          <div className="recrutement-apply-form-submit">
+            <button type="submit" className="recrutement-form-submit">
+              ENVOYER
+            </button>
           </div>
         </form>
       </div>

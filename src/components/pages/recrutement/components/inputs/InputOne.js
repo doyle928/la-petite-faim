@@ -1,9 +1,8 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../RecrutementJobList.css";
 import useAutocomplete from "@material-ui/lab/useAutocomplete";
 import CheckIcon from "@material-ui/icons/Check";
 import {
-  Label,
   InputWrapper,
   Tag,
   Listbox
@@ -19,7 +18,6 @@ const InputOne = params => {
 
   const {
     getRootProps,
-    getInputLabelProps,
     getInputProps,
     getTagProps,
     getListboxProps,

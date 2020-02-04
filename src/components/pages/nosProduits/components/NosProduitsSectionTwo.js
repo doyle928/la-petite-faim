@@ -53,8 +53,6 @@ function NosProduitsSectionTwo() {
     setImage(imageArray[0]);
     setActive(0);
   }
-  console.log("imageShow", imageShow);
-  console.log("active", active);
 
   const NavLink = ({ id, target, isActive, onClick }) => (
     <li

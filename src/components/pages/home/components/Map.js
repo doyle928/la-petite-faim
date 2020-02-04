@@ -1,5 +1,5 @@
 import React from "react";
-import ReactMapGL from "react-map-gl";
+import ReactMapGL, { NavigationControl } from "react-map-gl";
 import "./Map.css";
 
 class Map extends React.Component {
@@ -24,8 +24,13 @@ class Map extends React.Component {
             viewport
           })
         }
+        scrollZoom={false}
         mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-      />
+      >
+        <div style={{ position: "absolute", right: "18px", top: "7px" }}>
+          <NavigationControl />
+        </div>
+      </ReactMapGL>
     );
   }
 }

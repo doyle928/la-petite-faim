@@ -11,7 +11,7 @@
     background-size: cover;
     width: 100vw;
     height: 185px;
-    margin-top: 79px;
+    margin-top: 67px;
     /* opacity: 0; */
     transition: 1.5s ease-out;
 
@@ -48,9 +48,8 @@
 .recrutement-header-svg {
     background-image: url("../../../../styles/images/header-border.svg");
     position: absolute;
-    bottom: 0;
     background-size: 100% 100px;
-    bottom: 0;
+    bottom: -1px;
     height: 100px;
     z-index: 10;
     width: 100vw;

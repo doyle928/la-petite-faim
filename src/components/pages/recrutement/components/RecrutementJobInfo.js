@@ -97,8 +97,6 @@ function RecrutementJobInfo() {
     setImage(imageArray[0]);
     setActive(0);
   }
-  console.log("imageShow", imageShow);
-  console.log("active", active);
 
   const NavLink = ({ id, target, isActive, onClick }) => (
     <li
@@ -109,17 +107,15 @@ function RecrutementJobInfo() {
     </li>
   );
 
-  const PLink = string => {
-    if (string[0] !== undefined) {
-      console.log(string);
-      string.map(p => {
-        return <p>{p}</p>;
-      });
-    } else {
-      return <p>loading</p>;
-    }
-  };
-  console.log(PLink);
+  // const PLink = string => {
+  //   if (string[0] !== undefined) {
+  //     string.map(p => {
+  //       return <p>{p}</p>;
+  //     });
+  //   } else {
+  //     return <p>loading</p>;
+  //   }
+  // };
 
   const [slide, setSlide] = useState(0);
   useEffect(() => {
@@ -287,17 +283,17 @@ function RecrutementJobInfo() {
           <div>
             {/* <PLink string={imageShow.string} /> */}
             {imageShow.string
-              ? imageShow.string.map(p => {
+              ? imageShow.string.map((p, i) => {
                   if (imageShow.string.indexOf(p) === 0) {
-                    return <h3>{p}</h3>;
+                    return <h3 key={i}>{p}</h3>;
                   }
                 })
               : ""}
             <ul>
               {imageShow.string
-                ? imageShow.string.map(p => {
+                ? imageShow.string.map((p, i) => {
                     if (imageShow.string.indexOf(p) !== 0) {
-                      return <li>{p}</li>;
+                      return <li key={i}>{p}</li>;
                     }
                   })
                 : ""}

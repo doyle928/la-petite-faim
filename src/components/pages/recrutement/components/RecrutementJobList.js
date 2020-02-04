@@ -1,6 +1,5 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./RecrutementJobList.css";
-import _ from "lodash";
 import LocationOnRoundedIcon from "@material-ui/icons/LocationOnRounded";
 import SchoolRoundedIcon from "@material-ui/icons/SchoolRounded";
 import DateRangeRoundedIcon from "@material-ui/icons/DateRangeRounded";
@@ -109,7 +108,6 @@ function RecrutementJobList() {
     job_keys: null,
     department_keys: null
   });
-  console.log(values);
   return (
     <div className="recrutement-job-list-container">
       <div className="recrutement-job-list-header">
@@ -143,7 +141,7 @@ function RecrutementJobList() {
                   values.job_keys.indexOf(jobList[i].job) !== -1) ||
                 (values.job_keys === null &&
                   values.department_keys !== null &&
-                  values.department_keys.indexOf(jobList[i].department) !=
+                  values.department_keys.indexOf(jobList[i].department) !==
                     -1) ||
                 (values.job_keys !== null &&
                   values.department_keys !== null &&
