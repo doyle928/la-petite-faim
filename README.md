@@ -1,4 +1,4 @@
-[Live Version](https://lulu-la-petite-faim.herokuapp.com/)
+[Live Version](https://lulu-la-petite-faim.herokuapp.com/) - Running on Heroku, app goes to sleep so it takes time to start up.
 
 ---
 
