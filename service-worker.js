@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/la-petite-faim/precache-manifest.09bf7b908fc7bb78f01e4bd160b4284c.js"
+  "/la-petite-faim/precache-manifest.4ad9192372b448423706143226583c1d.js"
 );
 
 self.addEventListener('message', (event) => {
