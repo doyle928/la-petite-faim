@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/la-petite-faim/static/css/main.07f29e65.chunk.css",
-    "main.js": "/la-petite-faim/static/js/main.b9f0e33c.chunk.js",
-    "main.js.map": "/la-petite-faim/static/js/main.b9f0e33c.chunk.js.map",
+    "main.js": "/la-petite-faim/static/js/main.601ce16f.chunk.js",
+    "main.js.map": "/la-petite-faim/static/js/main.601ce16f.chunk.js.map",
     "runtime-main.js": "/la-petite-faim/static/js/runtime-main.a2547359.js",
     "runtime-main.js.map": "/la-petite-faim/static/js/runtime-main.a2547359.js.map",
     "static/css/2.cadacbf8.chunk.css": "/la-petite-faim/static/css/2.cadacbf8.chunk.css",
-    "static/js/2.1ade0c03.chunk.js": "/la-petite-faim/static/js/2.1ade0c03.chunk.js",
-    "static/js/2.1ade0c03.chunk.js.map": "/la-petite-faim/static/js/2.1ade0c03.chunk.js.map",
+    "static/js/2.db045865.chunk.js": "/la-petite-faim/static/js/2.db045865.chunk.js",
+    "static/js/2.db045865.chunk.js.map": "/la-petite-faim/static/js/2.db045865.chunk.js.map",
     "index.html": "/la-petite-faim/index.html",
-    "precache-manifest.f9698ee70281fe59c529fea9812b2903.js": "/la-petite-faim/precache-manifest.f9698ee70281fe59c529fea9812b2903.js",
+    "precache-manifest.3588d247fc337c214358a03bcd1b3803.js": "/la-petite-faim/precache-manifest.3588d247fc337c214358a03bcd1b3803.js",
     "service-worker.js": "/la-petite-faim/service-worker.js",
     "static/css/2.cadacbf8.chunk.css.map": "/la-petite-faim/static/css/2.cadacbf8.chunk.css.map",
     "static/css/main.07f29e65.chunk.css.map": "/la-petite-faim/static/css/main.07f29e65.chunk.css.map",
@@ -64,8 +64,8 @@
   "entrypoints": [
     "static/js/runtime-main.a2547359.js",
     "static/css/2.cadacbf8.chunk.css",
-    "static/js/2.1ade0c03.chunk.js",
+    "static/js/2.db045865.chunk.js",
     "static/css/main.07f29e65.chunk.css",
-    "static/js/main.b9f0e33c.chunk.js"
+    "static/js/main.601ce16f.chunk.js"
   ]
 }
