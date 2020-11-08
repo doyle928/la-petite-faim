@@ -1,0 +1,28 @@
+html {
+    /* background-color: rgb(255, 242, 226); */
+    /* background-color: #f7f7f7; */
+    overflow-x: hidden;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: #b4a06e;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    image-rendering: optimizeSpeed;
+}
+
+body {
+    /* padding-right: px !important; */
+}
