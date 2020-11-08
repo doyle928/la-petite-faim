@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7e8aaf98db9ec349df6753b7169af354",
+    "revision": "3010f1d897c0bbed457cde785bc68543",
     "url": "/la-petite-faim/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/la-petite-faim/static/css/2.cadacbf8.chunk.css"
   },
   {
-    "revision": "c317d76d569511ea936a",
+    "revision": "da314248a88ad4348695",
     "url": "/la-petite-faim/static/css/main.07f29e65.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/la-petite-faim/static/js/2.1ade0c03.chunk.js"
   },
   {
-    "revision": "c317d76d569511ea936a",
-    "url": "/la-petite-faim/static/js/main.8485ea81.chunk.js"
+    "revision": "da314248a88ad4348695",
+    "url": "/la-petite-faim/static/js/main.b9f0e33c.chunk.js"
   },
   {
     "revision": "c711dac74f90957a9d94",
